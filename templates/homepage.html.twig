@@ -27,46 +27,51 @@
     </main>
 
     {% if showSubscribeDialog %}
-        <div id="blur-overlay" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md hidden"></div>        
-        <dialog id="subscribe-dialog" class="bg-gray-600 text-white p-4 rounded-lg fixed top-1/2 transform -translate-y-1/2" open>
-            <p class="text-center">Voulez-vous souscrire à notre newsletter ?</p>
-            {{ form_start(form, { 'attr': { 'class': 'flex flex-col text-red-500' } }) }}
-                {{ form_widget(form.email) }}
-                {{ form_errors(form.email ) }}
-                <button type="submit" class="bg-blue-400 text-white font-bold rounded-lg p-2 m-2">Je souscris</button>
-                <button type="button" id="cancel-button" class="bg-red-400 text-white font-bold rounded-lg p-2 m-2">annuler</button>
-            {{ form_end(form) }}
-        </dialog>
-    {% endif %}
+    <div id="blur-overlay" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md hidden"></div>        
+    <dialog id="subscribe-dialog" class="bg-gray-600 text-white p-4 rounded-lg fixed top-1/2 transform -translate-y-1/2" open>
+        <p class="text-center">Voulez-vous souscrire à notre newsletter ?</p>
+        {{ form_start(form, { 'attr': { 'class': 'flex flex-col text-red-500' } }) }}
+            {{ form_widget(form.email) }}
+            {{ form_errors(form.email ) }}
+            <button type="submit" id="submit-button" class="bg-blue-400 text-white font-bold rounded-lg p-2 m-2">Je souscris</button>
+            <button type="button" id="cancel-button" class="bg-red-400 text-white font-bold rounded-lg p-2 m-2">annuler</button>
+        {{ form_end(form) }}
+    </dialog>
+{% endif %}
 
-    <script>
-        const dialog = document.getElementById('subscribe-dialog');
-        const blurOverlay = document.getElementById('blur-overlay');
-        const cancelButton = document.getElementById('cancel-button');
+<script>
+    const dialog = document.getElementById('subscribe-dialog');
+    const blurOverlay = document.getElementById('blur-overlay');
+    const cancelButton = document.getElementById('cancel-button');
+    const submitButton = document.getElementById('submit-button'); // TOO: faire + propre
 
-        if (dialog) {
-            dialog.addEventListener('close', () => {
-                blurOverlay.classList.add('hidden');
-                document.cookie = "subscribeDialogClosed=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days
-            });
+    if (dialog) {
+        dialog.addEventListener('close', () => {
+            blurOverlay.classList.add('hidden');
+            document.cookie = "subscribeDialogClosed=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days
+        });
 
-            cancelButton.addEventListener('click', () => {
-                dialog.close();
-            });
-        }
-
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        }
-
-        if (!getCookie('subscribeDialogClosed')) {
-            blurOverlay.classList.remove('hidden');
-        } else {
+        cancelButton.addEventListener('click', () => {
             dialog.close();
-        }
-    </script>
+        });
+
+        submitButton.addEventListener('click', () => {  // TOO: faire + propre
+            dialog.close();
+        });
+    }
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    if (!getCookie('subscribeDialogClosed')) {
+        blurOverlay.classList.remove('hidden');
+    } else {
+        dialog.close();
+    }
+</script>
 </body>
 
 {% endblock %}

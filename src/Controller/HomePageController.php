@@ -7,6 +7,7 @@ use App\Entity\NewsletterSubscriber;
 use App\Form\SubscriptionFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,6 +29,8 @@ class HomePageController extends AbstractController
             // Save the subscription to the database
             $entityManager->persist($newsletterSubscription);
             $entityManager->flush();
+
+            $cookie = new Cookie('subscribeDialogClosed', 'true', strtotime('+30 days'));
 
             // Optionally, add a flash message
             $this->addFlash('success', 'Vous avez bien été inscrit à la newsletter!');
