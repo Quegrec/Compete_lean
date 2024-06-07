@@ -13,8 +13,9 @@
         <meta charset="UTF-8">
         <meta name="description" content="Curious Creators vous présente son site en construction" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Landing Page{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <meta name="author" content="Curious Creators">
+        <title>{% block title %}CultuRally{% endblock %}</title>
+        <link rel="icon" href="img/CultuRally.jpeg">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -24,8 +25,12 @@
         {% endblock %}
     </head>
     <body>
-        {% include "shared/header.html.twig" %}
-        {% block body %}{% endblock %}
+        <div class="fixed sm:block top-0 left-0 w-full z-50">
+            {% include "shared/header.html.twig" %}
+        </div>
+        <div class="mt-20">
+            {% block body %}{% endblock %}
+        </div>
         {% include "shared/footer.html.twig" %}
     </body>
 </html>

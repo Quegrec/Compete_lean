@@ -1,5 +1,4 @@
 {% extends "base.html.twig" %}
-{% block title %}Curious Creation - Page d'atterrissage{% endblock %}
 
 {% block body %}
 <body class="bg-black flex flex-col min-h-screen text-center">
@@ -7,71 +6,144 @@
     <main class="flex-grow flex flex-col justify-center items-center space-y-8 px-4 sm:px-0">
         <div class="text-2xl sm:text-5xl space-y-4 w-full sm:w-3/4 lg:w-1/2">
             <h1 class="text-blue-400 font-bold">
-                Cette page d'atterrissage vous est présentée par
+                CultuRally c'est la solution pour connecter nos zones rurales à une vie culturelle dynamique.
             </h1>
-            <h2 class="text-red-400 font-black underline">
-                Curious Creators
-            </h2>
         </div>
         
-        <div class="space-y-4 w-full sm:w-3/4 lg:w-1/2">
-            <h3 class="text-lg sm:text-xl text-white font-semibold">
-                Ici il va y avoir du texte décrivant notre activité et plein d'autres contenus
-            </h3>
-            <p class="text-md sm:text-lg text-white font-semibold">
-                vous allez voir vous allez adorer
-            </p>
-            <p class="text-[120px] sm:text-[180px] animate-pulse text-gray-700">WIP</p>
-            <a href="" class="bg-blue-400 text-white font-bold rounded-lg p-2 hover:bg-blue-500">ce lien ne sert a rien</a>
+        <div class="flex gap-4 justify-center text-white">
+            <button class="bg-gray-400 p-4 rounded-lg">Recherchez un évenement près de chez vous</button>
+            <button class="bg-gray-400 p-4 rounded-lg">Organisez un évenement près de chez vous</button>
+        </div>
+        
+        <p class="text-[120px] sm:text-[180px] animate-pulse text-gray-700">WIP</p>
+
+        <div class="relative w-full sm:w-5/12" data-carousel="static">
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div class="duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="https://picsum.photos/200/300?random=1" class="carousel" alt="...">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://picsum.photos/200/300?random=2" class="carousel" alt="...">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://picsum.photos/200/300?random=3" class="carousel" alt="...">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://picsum.photos/200/300?random=4" class="carousel" alt="...">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://picsum.photos/200/300?random=5" class="carousel" alt="...">
+                </div>
+            </div>
+            <button type="button" class="carousel-btn start-0" data-carousel-prev>
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+            </button>
+            <button type="button" class="carousel-btn end-0" data-carousel-next>
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+            </button>
         </div>
     </main>
 
     {% if showSubscribeDialog %}
-    <div id="blur-overlay" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md hidden"></div>        
-    <dialog id="subscribe-dialog" class="bg-gray-600 text-white p-4 rounded-lg fixed top-1/2 transform -translate-y-1/2" open>
-        <p class="text-center">Voulez-vous souscrire à notre newsletter ?</p>
-        {{ form_start(form, { 'attr': { 'class': 'flex flex-col text-red-500' } }) }}
-            {{ form_widget(form.email) }}
-            {{ form_errors(form.email ) }}
-            <button type="submit" id="submit-button" class="bg-blue-400 text-white font-bold rounded-lg p-2 m-2">Je souscris</button>
-            <button type="button" id="cancel-button" class="bg-red-400 text-white font-bold rounded-lg p-2 m-2">annuler</button>
-        {{ form_end(form) }}
-    </dialog>
-{% endif %}
+        <div id="blur-overlay" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md hidden"></div>        
+        <dialog id="subscribe-dialog" class="bg-gray-600 text-white p-4 rounded-lg fixed top-1/2 transform -translate-y-1/2" open>
+            <p class="text-center">Voulez-vous souscrire à notre newsletter ?</p>
+            {{ form_start(form, { 'attr': { 'class': 'flex flex-col text-red-500' } }) }}
+                {{ form_widget(form.email) }}
+                {{ form_errors(form.email ) }}
+                <button type="submit" id="submit-button" class="bg-blue-400 text-white font-bold rounded-lg p-2 m-2">Je souscris</button>
+                <button type="button" id="cancel-button" class="bg-red-400 text-white font-bold rounded-lg p-2 m-2">annuler</button>
+            {{ form_end(form) }}
+        </dialog>
+    {% endif %}
 
-<script>
-    const dialog = document.getElementById('subscribe-dialog');
-    const blurOverlay = document.getElementById('blur-overlay');
-    const cancelButton = document.getElementById('cancel-button');
-    const submitButton = document.getElementById('submit-button'); // TOO: faire + propre
-
-    if (dialog) {
-        dialog.addEventListener('close', () => {
-            blurOverlay.classList.add('hidden');
-            document.cookie = "subscribeDialogClosed=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('[data-carousel="static"]');
+            const items = carousel.querySelectorAll('[data-carousel-item]');
+            const prevButton = carousel.querySelector('[data-carousel-prev]');
+            const nextButton = carousel.querySelector('[data-carousel-next]');
+            const indicators = carousel.querySelectorAll('[data-carousel-slide-to]');
+    
+            let currentIndex = 0;
+            const totalItems = items.length;
+    
+            function showItem(index) {
+                items.forEach((item, i) => {
+                    item.classList.toggle('hidden', i !== index);
+                    item.classList.toggle('block', i === index);
+                });
+    
+                indicators.forEach((indicator, i) => {
+                    indicator.setAttribute('aria-current', i === index ? 'true' : 'false');
+                    indicator.classList.toggle('bg-white', i === index);
+                    indicator.classList.toggle('bg-gray-500', i !== index);
+                });
+            }
+    
+            function showNext() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                showItem(currentIndex);
+            }
+    
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                showItem(currentIndex);
+            }
+    
+            function goToSlide(index) {
+                currentIndex = index;
+                showItem(currentIndex);
+            }
+    
+            nextButton.addEventListener('click', showNext);
+            prevButton.addEventListener('click', showPrev);
+    
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => goToSlide(index));
+            });
+    
+            showItem(currentIndex);
         });
 
-        cancelButton.addEventListener('click', () => {
-            dialog.close();
+        document.addEventListener('DOMContentLoaded', function() {
+            const dialog = document.getElementById('subscribe-dialog');
+            const blurOverlay = document.getElementById('blur-overlay');
+            const cancelButton = document.getElementById('cancel-button');
+            const submitButton = document.getElementById('submit-button'); // TODO: faire + propre
+    
+            if (dialog) {
+                dialog.addEventListener('close', () => {
+                    blurOverlay.classList.add('hidden');
+                    document.cookie = "subscribeDialogClosed=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days
+                });
+    
+                cancelButton.addEventListener('click', () => {
+                    dialog.close();
+                });
+    
+                submitButton.addEventListener('click', () => {  // TODO: faire + propre
+                    dialog.close();
+                });
+            }
+    
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+    
+            if (!getCookie('subscribeDialogClosed')) {
+                blurOverlay.classList.remove('hidden');
+            } else {
+                dialog.close();
+            }
         });
-
-        submitButton.addEventListener('click', () => {  // TOO: faire + propre
-            dialog.close();
-        });
-    }
-
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-
-    if (!getCookie('subscribeDialogClosed')) {
-        blurOverlay.classList.remove('hidden');
-    } else {
-        dialog.close();
-    }
-</script>
+    </script>
 </body>
 
 {% endblock %}
