@@ -26,8 +26,8 @@ class SubscriptionFormType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => 'Votre adresse email',
                 'attr' => [
-                    'placeholder' => 'Entrez votre adresse email',
-                    'class' => 'rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm text-black',
+                    'placeholder' => "Entrez l'adresse mail",
+                    'class' => 'rounded-full px-4 py-2 border border-black focus:ring focus:ring-blue-500 focus:outline-none bg-yellow-100',
                 ],
                 'constraints' => [
                     new NotBlank([
