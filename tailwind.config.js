@@ -5,7 +5,17 @@ module.exports = {
     "./templates/**/*.html.twig"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'background': '#F1F9FF',
+        'primary': '#27292E',
+        'title': '#00062F',
+        'cta': '#11C7D5',
+      },
+      fontFamily: {
+        'default': 'Nunito Sans'
+      },
+    },
   },
   plugins: [],
 }

@@ -20,6 +20,9 @@ class User
     #[ORM\Column(length: 255)]
     private string $password;
 
+    #[ORM\Column(type: 'json')]
+    private array $roles = [];
+    
     public function getId(): int
     {
         return $this->id;
@@ -45,6 +48,18 @@ class User
     public function setPassword(string $password): static
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getRoles(): array
+    {
+        return $this->roles;
+    }
+
+    public function setRoles(array $roles): static
+    {
+        $this->roles = $roles;
 
         return $this;
     }

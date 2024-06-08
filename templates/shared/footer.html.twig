@@ -1,11 +1,63 @@
-<footer class="bg-yellow-100 p-8 text-center">
-    <div class="flex justify-center mb-6">
-        <img src="img/CULTURALLY_V2_LOGO.svg" alt="Profile" class="rounded-full h-10">
-        {{ form_start(form) }}
-            {{ form_widget(form.email) }}
-            {{ form_errors(form.email) }}
-            <button type="submit" class="text-black rounded-full px-6 py-2 border-black border">S'inscrire</button>
-        {{ form_end(form) }}
+<footer class="py-8">
+        <div class="flex flex-row gap-60 w-max justify-between mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-between">
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="img/CULTURALLY_V2_LOGO.svg" class="h-8" alt="CultuRally Logo"/>
+                    <span class="text-lg font-semibold text-[#00062F]">CultuRally</span>
+                </a>
+                <p class="mt-4 text-gray-500 lg:mt-0">&copy; 2024 culturally</p>
+                <div class="flex space-x-4 mt-4 lg:mt-0">
+                    <a href="">
+                        <img src="img/facebook.svg" alt="Facebook" class="h-6 w-6">
+                    </a>
+                    <a href="">
+                        <img src="img/twitter.svg" alt="Twitter" class="h-6 w-6">
+                    </a>
+                    <a href="">
+                        <img src="img/instagram.svg" alt="Instagram" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8 text-gray-600">
+                <div>
+                    <h3 class="font-semibold">Location</h3>
+                    <ul>
+                        <li><a href="" class="hover:underline">America</a></li>
+                        <li><a href="" class="hover:underline">Asia</a></li>
+                        <li><a href="" class="hover:underline">Europe</a></li>
+                        <li><a href="" class="hover:underline">Africa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Contact</h3>
+                    <ul>
+                        <li><a href="" class="hover:underline">About Me</a></li>
+                        <li><a href="" class="hover:underline">Teams</a></li>
+                        <li><a href="" class="hover:underline">Profile</a></li>
+                        <li><a href="" class="hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Legals</h3>
+                    <ul>
+                        <li><a href="" class="hover:underline">Privacy</a></li>
+                        <li><a href="" class="hover:underline">Disclaimer</a></li>
+                        <li><a href="" class="hover:underline">Terms</a></li>
+                        <li><a href="" class="hover:underline">Company</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{# <footer class="bg-primary p-8 text-center">
+    <div class="flex justify-center mb-6 text-black">
+        <img src="{{ asset('img/CULTURALLY_V2_LOGO.svg') }}" alt="Profile" class="rounded-full h-10">
+        {{ form_start(newsletterForm, {'action': path('newsletter_subscribe')}) }}
+            {{ form_widget(newsletterForm.email) }}
+            {{ form_errors(newsletterForm.email) }}
+            <button type="submit" class="rounded-full px-6 py-2 border-black border">S'inscrire</button>
+        {{ form_end(newsletterForm) }}
     </div>
     <ul class="space-y-2 mb-4 text-sm text-black">
         <li><a href="" class="hover:underline">Devenir partenaire</a></li>
@@ -13,22 +65,22 @@
         <li><a href="" class="hover:underline">Politique de confidentialité</a></li>
         <li><a href="" class="hover:underline">Nous contacter</a></li>
     </ul>
-    <hr class="border-gray-300 my-4">
-    <div class="flex justify-center gap-4 text-xl text-black mb-4">
-        <a href="" aria-label="Instagram" class="hover:text-gray-900">
-            <i class="fab fa-instagram"></i>
+    <hr class="border-black my-4">
+    <div class="flex justify-center gap-8 text-xl text-black mb-4">
+        <a href="">
+            <img src="{{ asset('img/instagram.svg') }}" aria-label="Instagram" class="hover:text-gray-900"/>
         </a>
-        <a href="" aria-label="Facebook" class="hover:text-gray-900">
-            <i class="fab fa-facebook"></i>
+        <a href="">
+            <img src="{{ asset('img/facebook.svg') }}" aria-label="Facebook" class="hover:text-gray-900"/>
         </a>
-        <a href="" aria-label="Twitter" class="hover:text-gray-900">
-            <i class="fab fa-twitter"></i>
+        <a href="">
+            <img src="{{ asset('img/twitter.svg') }}" aria-label="Twitter" class="hover:text-gray-900"/>
         </a>
-        <a href="" aria-label="LinkedIn" class="hover:text-gray-900">
-            <i class="fab fa-linkedin"></i>
+        <a href="">
+            <img src="{{ asset('img/linkedin.svg') }}" aria-label="LinkedIn" class="hover:text-gray-900"/>
         </a>
     </div>
-    <div class="text-gray-500 text-sm">
+    <div class="text-gray-900 text-sm">
         &copy; 2024 culturally.co
     </div>
-</footer>
+</footer> #}

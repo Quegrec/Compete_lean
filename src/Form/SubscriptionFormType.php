@@ -9,7 +9,6 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Callback;
-use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 class SubscriptionFormType extends AbstractType
@@ -24,15 +23,11 @@ class SubscriptionFormType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, [
-                'label' => 'Votre adresse email',
                 'attr' => [
-                    'placeholder' => "Entrez l'adresse mail",
-                    'class' => 'rounded-full px-4 py-2 border border-black focus:ring focus:ring-blue-500 focus:outline-none bg-yellow-100',
+                    'placeholder' => "Entrez votre adresse mail",
+                    'class' => 'bg-[#35CFDB] w-full',
                 ],
                 'constraints' => [
-                    new NotBlank([
-                        'message' => 'Veuillez saisir une adresse e-mail',
-                    ]),
                     new Callback([$this, 'alreadySubscribed'])
                 ],
             ]);
