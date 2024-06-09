@@ -1,0 +1,19 @@
+{# templates/post/show.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {{ post.title }} - La Plateforme de Dynamisation Culturelle Locale
+{% endblock %}
+
+{% block body %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4">{{ post.title }}</h1>
+        <img class="w-full h-auto rounded-lg shadow-lg mb-4" src="{{ asset('img/Posts/' ~ post.picture) }}" alt="{{ post.title }}">
+        <div class="prose prose-lg">
+            <p>{{ post.description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

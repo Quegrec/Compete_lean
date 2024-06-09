@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\PostRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -19,6 +20,8 @@ class Post
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
+    #[ORM\Column]
+    private ?string $picture = null;
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
@@ -60,6 +63,18 @@ class Post
     public function setSlug(string $slug): static
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getPicture(): string|null|UploadedFile
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(string|null|UploadedFile $picture): static
+    {
+        $this->picture = $picture;
 
         return $this;
     }
