@@ -2,9 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\NewsletterSubscriber;
 use App\Form\LoginFormType;
-use App\Form\SubscriptionFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,12 +16,8 @@ class SecurityController extends AbstractController
         $form = $this->createForm(LoginFormType::class);
         $form->handleRequest($request);
 
-        $newsletterSubscriber = new NewsletterSubscriber();
-        $newsletterForm = $this->createForm(SubscriptionFormType::class, $newsletterSubscriber);
-
         return $this->render('security/login.html.twig', [
             'loginForm' => $form->createView(),
-            'newsletterForm' => $newsletterForm->createView()
         ]);
     }
 
