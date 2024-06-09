@@ -1,15 +1,44 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-    Nouvel Article - La Plateforme de Dynamisation Culturelle Locale
+    Nouvel Article - CultuRally
 {% endblock %}
 
 {% block body %}
-    <h1>Nouvel Article</h1>
-    {{ form_start(form) }}
-        {{ form_row(form.title) }}
-        {{ form_row(form.description) }}
-        {{ form_row(form.picture) }}
-        <button type="submit">Créer l'article</button>
-    {{ form_end(form) }}
+    <div class="container mx-auto mt-5 px-4 py-8 max-w-3xl">
+        <h1 class="text-2xl font-bold mb-4">Nouvel Article</h1>
+        {{ form_start(form, {'attr': {'class': 'space-y-6'}}) }}
+
+        <div class="space-y-2">
+            {{ form_label(form.title, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+            {{ form_widget(form.title, {'attr': {'class': 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm', 'placeholder': 'Titre de l\'article'}}) }}
+            <div class="text-red-500 text-sm mt-1">
+                {{ form_errors(form.title) }}
+            </div>
+        </div>
+
+        <div class="space-y-2">
+            {{ form_label(form.description, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+            {{ form_widget(form.description, {'attr': {'class': 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm', 'placeholder': 'Description de l\'article'}}) }}
+            <div class="text-red-500 text-sm mt-1">
+                {{ form_errors(form.description) }}
+            </div>
+        </div>
+
+        <div class="space-y-2">
+            {{ form_label(form.picture, null, {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+            {{ form_widget(form.picture, {'attr': {'class': 'mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border file:border-gray-300 file:rounded-md file:text-sm file:font-semibold file:bg-gray-50 file:text-gray-700 hover:file:bg-gray-100'}}) }}
+            <div class="text-red-500 text-sm mt-1">
+                {{ form_errors(form.picture) }}
+            </div>
+        </div>
+
+        <div class="flex justify-end">
+            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Créer l'article
+            </button>
+        </div>
+        
+        {{ form_end(form) }}
+    </div>
 {% endblock %}

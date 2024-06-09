@@ -25,9 +25,15 @@
         <li>
           <a href="/actualites" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Nos actualités</a>
         </li>
-        <li>
-          <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">se connecter</a>
-        </li>
+        {% if app.user %}
+          <li>
+            <a href="/logout" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">se déconnecter</a>
+          </li>
+          {% else %}
+          <li>
+            <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">se connecter</a>
+          </li>
+        {% endif %}
       </ul>
     </div>
   </div>

@@ -10,21 +10,21 @@
 {% endblock %}
 
 {% block body %}
-    <div class="bg-background flex flex-row ">
-        <div class="flex flex-col items-start w-4/12 place-self-center gap-4 mx-auto p-4">
-            <h1 class="text-6xl font-black">
+    <div class="bg-background flex flex-col sm:flex-row">
+        <div class="flex flex-col items-start w-full sm:w-4/12 sm:place-self-center sm:gap-4 sm:mx-auto p-4">
+            <h1 class="text-4xl sm:text-6xl font-black text-center sm:text-start">
                 La Plateforme de Dynamisation Culturelle Locale
             </h1>
-            <p class="text-lg w-6/12">Notre mission est de créer des ponts entre les citoyens, les associations, et les mairies pour valoriser et dynamiser la vie culturelle de chaque ville.</p>
+            <p class="text-lg sm:w-6/12 text-center sm:text-start mt-4 px-4">Notre mission est de créer des ponts entre les citoyens, les associations, et les mairies pour valoriser et dynamiser la vie culturelle de chaque ville.</p>
             <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg">Nous rejoindre</button>
         </div>
-        <img class="h-[700px] mt-10" src="img/vagues.svg">
+        <img class="h-[300px] md:h-[700px] mt-10" src="img/vagues.svg">
     </div>
 
-    <div class="flex flex-row mt-32">
-        <img src="img/bulle.svg">
-        <div class="flex flex-col items-start w-4/12 place-self-center gap-4 mx-auto p-4">
-            <h2 class="text-6xl font-black">Pourquoi Nous Rejoindre ?</h2>
+    <div class="flex flex-col md:flex-row mt-32">
+        <img src="img/bulle.svg" class="md:mr-8">
+        <div class="flex flex-col items-start w-full md:w-4/12 gap-4 mx-auto p-4">
+            <h2 class="text-4xl md:text-6xl font-black text-center md:text-left">Pourquoi Nous Rejoindre ?</h2>
             <p class="text-lg">
                 <span class="font-bold">Citoyens</span> : Participez activement à la vie culturelle de votre ville, découvrez de nouveaux événements et projets, et contribuez à la richesse de votre communauté.
             </p>
@@ -34,14 +34,14 @@
             <p class="text-lg">
                 <span class="font-bold">Mairies</span> : Facilitez l’émergence de projets culturels, soutenez les associations locales, et renforcez la cohésion sociale au sein de votre commune.
             </p>
-            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg">Nous rejoindre</button>
+            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg mx-auto md:ml-0">Nous rejoindre</button>
         </div>
     </div>
 
-    <div class="flex flex-row-reverse mt-32">
-        <img src="img/bulle.svg" class="rotate-y-180">
-        <div class="flex flex-col items-start w-4/12 place-self-center gap-4 mx-auto p-4">
-            <h2 class="text-6xl font-black">Valoriser et Soutenir la Culture Locale</h2>
+    <div class="flex flex-col md:flex-row-reverse mt-32">
+        <img src="img/bulle.svg" class="rotate-y-180 md:ml-8">
+        <div class="flex flex-col items-start w-full md:w-4/12 gap-4 mx-auto p-4">
+            <h2 class="text-4xl md:text-6xl font-black text-center md:text-left">Valoriser et Soutenir la Culture Locale</h2>
             <p class="text-lg">
                 <span class="font-bold">Promotion des Événements</span> : Faites connaître vos événements culturels auprès d'un large public.
             </p>
@@ -51,14 +51,14 @@
             <p class="text-lg">
                 <span class="font-bold">Ressources et Conseils</span> : Accédez à des ressources et des conseils pour développer et pérenniser vos projets culturels.
             </p>
-            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg">Je soutiens</button>
+            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg mx-auto md:ml-0">Je soutiens</button>
         </div>
     </div>
 
-    <div class="flex flex-row mt-32">
-        <img src="img/bulle.svg">
-        <div class="flex flex-col items-start w-4/12 place-self-center gap-4 mx-auto p-4">
-            <h2 class="text-6xl font-black">Faciliter les Projets Culturels</h2>
+    <div class="flex flex-col md:flex-row mt-32">
+        <img src="img/bulle.svg" class="md:mr-8">
+        <div class="flex flex-col items-start w-full md:w-4/12 gap-4 mx-auto p-4">
+            <h2 class="text-4xl md:text-6xl font-black text-center md:text-left">Faciliter les Projets Culturels</h2>
             <p class="text-lg">
                 <span class="font-bold">Lancez Votre Projet</span> : Présentez vos idées et trouvez le soutien nécessaire pour les concrétiser.
             </p>
@@ -68,23 +68,23 @@
             <p class="text-lg">
                 <span class="font-bold">Collaborations Locales</span> : Trouvez des partenaires locaux pour développer des initiatives communes.
             </p>
-            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg">Je me lance</button>
+            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg mx-auto md:ml-0">Je me lance</button>
         </div>
     </div>
 
-    <div class="container mx-auto rounded-3xl bg-cta text-white h-[350px] text-center mt-48">
-    <p class="text-6xl font-black py-16 px-24">Pour en savoir plus rejoignez notre newsletter</p>
-    {{ form_start(form) }}
-        <div class="flex justify-center mb-6 gap-16">
-            <div class="flex flex-row sm:w-[45%] gap-32 bg-[#35CFDB] rounded-full px-4 py-2 focus:ring focus:ring-blue-500 focus:outline-none text-gray-700">
-                <img src="img/mail.svg">
-                {{ form_widget(form.email) }}
+    <div class="container mx-auto rounded-3xl bg-cta text-white h-[350px] text-center mt-16 sm:mt-48">
+        <p class="text-4xl sm:text-6xl font-black p-8 sm:py-16 sm:px-24">Pour en savoir plus rejoignez notre newsletter</p>
+        {{ form_start(form) }}
+            <div class="flex justify-center mb-6 sm:gap-16">
+                <div class="flex flex-col sm:flex-row sm:w-[45%] sm:gap-32 bg-[#35CFDB] rounded-full px-4 py-2 focus:ring focus:ring-blue-500 focus:outline-none text-gray-700">
+                    <img src="img/mail.svg" class="hidden sm:block">
+                    {{ form_widget(form.email) }}
+                </div>
+                <button type="submit" class="rounded-full px-6 py-2 bg-white text-cta">S'inscrire</button>
             </div>
-            <button type="submit" class="rounded-full px-6 py-2 bg-white text-cta">S'inscrire</button>
-        </div>
-        <div class="text-red-500">
-            {{ form_errors(form.email) }}
-        </div>
-    {{ form_end(form) }}
+            <div class="text-red-500">
+                {{ form_errors(form.email) }}
+            </div>
+        {{ form_end(form) }}
     </div>
 {% endblock %}

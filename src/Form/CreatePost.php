@@ -5,7 +5,6 @@ namespace App\Form;
 use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -20,13 +19,11 @@ class CreatePost extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'attr' => [ 'class' => 'bg-[#35CFDB] w-full' ],
                 'constraints' => [
                     new Length(['min' => 5, 'max' => 255]),
                 ],
             ])
             ->add('description', TextareaType::class, [
-                'attr' => [ 'class' => 'bg-[#35CFDB] w-full' ],
                 'constraints' => [
                     new Length(['min' => 10]),
                 ],
@@ -48,10 +45,6 @@ class CreatePost extends AbstractType
                     'mimeTypesMessage' => "Format d'image incorrect",
                     ])
                 ],
-            ])
-            ->add('submit', SubmitType::class, [
-                'label' => 'Créer un article',
-                'attr' => [ 'class' => 'bg-[#35CFDB] w-full' ],
             ]);
         }
 
