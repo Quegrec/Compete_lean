@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/api/admin')]
 class AdminController extends AbstractController
 {
 
@@ -17,7 +16,7 @@ class AdminController extends AbstractController
     {
     }
 
-    #[Route('/create/initial', name: 'api_admin_create_initial', methods: ['POST'])]
+    #[Route('/api/admin/create_initial', name: 'api_admin_create_initial', methods: ['POST'])]
     public function createInitialAdmin(Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
