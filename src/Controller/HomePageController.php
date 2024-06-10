@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomePageController extends AbstractController
 {
-    #[Route('/home', name: 'homepage')]
+    #[Route('/', name: 'homepage')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         $newsletterSubscription = new NewsletterSubscriber();
