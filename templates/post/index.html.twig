@@ -7,7 +7,7 @@
 {% block body %}
 <div class="container mx-auto px-4 py-8 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-    {% if app.user.roles == ['ROLE_ADMIN'] %}
+    {% if app.user and app.user.roles == ['ROLE_ADMIN'] %}
         <a href="/admin/new-post" class="bg-primary text-white p-4 rounded-lg text-center">Ajouter une actualité</a>
     {% endif %}
 
