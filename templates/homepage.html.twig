@@ -1,90 +1,154 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <style>
-        .rotate-y-180 {
-            transform: rotateY(180deg);
-        }
-    </style>
+{% block title %}
+    Accueil - CultuRally
 {% endblock %}
 
 {% block body %}
-    <div class="bg-background flex flex-col sm:flex-row">
-        <div class="flex flex-col items-start w-full sm:w-4/12 sm:place-self-center sm:gap-4 sm:mx-auto p-4">
-            <h1 class="text-4xl sm:text-6xl font-black text-center sm:text-start">
-                La Plateforme de Dynamisation Culturelle Locale
-            </h1>
-            <p class="text-lg sm:w-6/12 text-center sm:text-start mt-4 px-4">Notre mission est de créer des ponts entre les citoyens, les associations, et les mairies pour valoriser et dynamiser la vie culturelle de chaque ville.</p>
-            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg">Nous rejoindre</button>
-        </div>
-        <img class="h-[300px] md:h-[700px] mt-10" src="img/vagues.svg">
+    <style>
+        @layer utilities {
+            .bg-custom-gradient {
+                background: linear-gradient(
+                    90deg,
+                    rgba(254, 183, 55, 0.7) 0%,
+                    rgba(254, 218, 154, 0.7) 23.5%,
+                    rgba(196, 216, 200, 0.7) 69%,
+                    rgba(92, 134, 102, 0.7) 100%
+                );
+            }
+        }
+    </style>
+    
+    <div class="flex flex-col bg-landing bg-cover bg-center h-screen px-[55px]">
+        <h1 class="text-white font-title text-3xl font-bold my-[110px]">LA PLATEFORME DE DYNAMISATION CULTURELLE LOCALE</h1>
+        <p class="text-white font-body text-lg leading-[32.4px]">Notre mission est de créer des ponts entre les citoyens, les associations,
+        et les mairies pour valoriser et dynamiser la vie culturelle de chaque ville.</p>
+        <button class="place-self-center bg-cta px-[45px] py-[14px] mt-16 rounded-full text-sm font-semibold font-cta">Nous rejoindre</button>
     </div>
-
-    <div class="flex flex-col md:flex-row mt-32">
-        <img src="img/bulle.svg" class="md:mr-8">
-        <div class="flex flex-col items-start w-full md:w-4/12 gap-4 mx-auto p-4">
-            <h2 class="text-4xl md:text-6xl font-black text-center md:text-left">Pourquoi Nous Rejoindre ?</h2>
-            <p class="text-lg">
-                <span class="font-bold">Citoyens</span> : Participez activement à la vie culturelle de votre ville, découvrez de nouveaux événements et projets, et contribuez à la richesse de votre communauté.
-            </p>
-            <p class="text-lg">
-                <span class="font-bold">Associations</span> : Accédez à des fonds, trouvez des partenaires, et valorisez vos initiatives grâce à une visibilité accrue et des ressources adaptées.
-            </p>
-            <p class="text-lg">
-                <span class="font-bold">Mairies</span> : Facilitez l’émergence de projets culturels, soutenez les associations locales, et renforcez la cohésion sociale au sein de votre commune.
-            </p>
-            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg mx-auto md:ml-0">Nous rejoindre</button>
-        </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row-reverse mt-32">
-        <img src="img/bulle.svg" class="rotate-y-180 md:ml-8">
-        <div class="flex flex-col items-start w-full md:w-4/12 gap-4 mx-auto p-4">
-            <h2 class="text-4xl md:text-6xl font-black text-center md:text-left">Valoriser et Soutenir la Culture Locale</h2>
-            <p class="text-lg">
-                <span class="font-bold">Promotion des Événements</span> : Faites connaître vos événements culturels auprès d'un large public.
-            </p>
-            <p class="text-lg">
-                <span class="font-bold">Aide au Financement</span> : Bénéficiez d'un soutien financier pour vos projets grâce à nos partenaires et à des campagnes de crowdfunding.
-            </p>
-            <p class="text-lg">
-                <span class="font-bold">Ressources et Conseils</span> : Accédez à des ressources et des conseils pour développer et pérenniser vos projets culturels.
-            </p>
-            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg mx-auto md:ml-0">Je soutiens</button>
-        </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row mt-32">
-        <img src="img/bulle.svg" class="md:mr-8">
-        <div class="flex flex-col items-start w-full md:w-4/12 gap-4 mx-auto p-4">
-            <h2 class="text-4xl md:text-6xl font-black text-center md:text-left">Faciliter les Projets Culturels</h2>
-            <p class="text-lg">
-                <span class="font-bold">Lancez Votre Projet</span> : Présentez vos idées et trouvez le soutien nécessaire pour les concrétiser.
-            </p>
-            <p class="text-lg">
-                <span class="font-bold">Soutenez des Initiatives</span> : Explorez les projets en cours et apportez votre contribution.
-            </p>
-            <p class="text-lg">
-                <span class="font-bold">Collaborations Locales</span> : Trouvez des partenaires locaux pour développer des initiatives communes.
-            </p>
-            <button class="rounded-full px-6 py-2 bg-cta text-white font-black text-lg mx-auto md:ml-0">Je me lance</button>
-        </div>
-    </div>
-
-    <div class="container mx-auto rounded-3xl bg-cta text-white h-[350px] text-center mt-16 sm:mt-48">
-        <p class="text-4xl sm:text-6xl font-black p-8 sm:py-16 sm:px-24">Pour en savoir plus rejoignez notre newsletter</p>
-        {{ form_start(form) }}
-            <div class="flex justify-center mb-6 sm:gap-16">
-                <div class="flex flex-col sm:flex-row sm:w-[45%] sm:gap-32 bg-[#35CFDB] rounded-full px-4 py-2 focus:ring focus:ring-blue-500 focus:outline-none text-gray-700">
-                    <img src="img/mail.svg" class="hidden sm:block">
-                    {{ form_widget(form.email) }}
+    <div class="bg-primary rounded-3xl h-[481px] w-full absolute top-[878px] z-0"></div>
+    
+    <div class="relative flex flex-col mt-[-160px] z-10">
+        <h2 class="text-white font-title text-xl font-bold place-self-center py-[52px] px-[45px]">
+            POURQUOI NOUS REJOINDRE ?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 place-self-center mt-8 gap-20 py-[52px] px-[45px]">
+            <div class="bg-white rounded-3xl flex flex-col">
+                <div class="px-[41px]">
+                    <h3 class="text-[#5C8666] font-title text-lg font-bold mt-5">CITOYENS</h3>
+                    <p class="text-[#5C8666] font-body text-sm mt-4 leading-[25.6px]">
+                        Participez activement à la vie culturelle de votre ville, découvrez de nouveaux événements et projets,
+                        et contribuez à la richesse de votre communauté.
+                    </p>
                 </div>
-                <button type="submit" class="rounded-full px-6 py-2 bg-white text-cta">S'inscrire</button>
+                <img src="/img/people.jpg" alt="citoyens" class="rounded-b-3xl">
             </div>
-            <div class="text-red-500">
-                {{ form_errors(form.email) }}
+            <div class="bg-white rounded-3xl flex flex-col">
+                <div class="px-[41px]">
+                    <h3 class="text-[#326BBA] font-title text-lg font-bold mt-5">ASSOCIATIONS</h3>
+                    <p class="text-[#326BBA] font-body text-sm mt-4 leading-[25.6px]">
+                        Accédez à des fonds, trouvez des partenaires, et valorisez vos initiatives grâce à une visibilité accrue et des ressources adaptées.
+                    </p>
+                </div>
+                <img src="/img/people.jpg" alt="associations" class="rounded-b-3xl">
             </div>
-        {{ form_end(form) }}
+            <div class="bg-white rounded-3xl flex flex-col">
+                <div class="px-[41px]">
+                    <h3 class="text-[#D0220A] font-title text-lg font-bold mt-5">MAIRIES</h3>
+                    <p class="text-[#D0220A] font-body text-sm mt-4 leading-[25.6px]">
+                        Participez activement à la vie culturelle de votre ville, découvrez de nouveaux événements et projets,
+                        et contribuez à la richesse de votre communauté.
+                    </p>
+                </div>
+                <img src="/img/people.jpg" alt="mairies" class="rounded-b-3xl">
+            </div>
+            <button class="place-self-center bg-cta px-[45px] py-[14px] rounded-full text-sm font-semibold font-cta">Nous rejoindre</button>
+        </div>
+        <img src="/img/pirouette.svg" alt="pirouette" class="absolute top-[1674px] left-[335px] h-[196px]">
+    
     </div>
+    <div class="flex flex-col text-primary mt-[444px] px-[76px] gap-[124px]">
+        <h2 class="text-primary font-title text-xl font-bold place-self-center">FACILITER LES PROJETS CULTURELS</h2>
+        <div class="flex flex-col">
+            <img src="/img/bleu.svg" alt="bleu" class="mb-[32.12px]">
+            <h3 class="font-title text-lg font-bold">AIDE AU FINANCEMENT</h3>
+            <p class="font-body text-sm mt-4 leading-[25.6px]">
+                Bénéficiez d'un soutien financier pour vos projets grâce à nos partenaires et à des campagnes de crowdfunding.
+            </p>
+        </div>
+        <div class="flex flex-col">
+            <img src="/img/vert.svg" alt="vert" class="mb-[32.12px] h-[218.66px]">
+            <h3 class="font-title text-lg font-bold">PROMOTION DES ÉVÉNEMENTS</h3>
+            <p class="font-body text-sm mt-4 leading-[25.6px]">
+                Faites connaître vos événements culturels auprès d'un large public.
+            </p>
+        </div>
+        <div class="flex flex-col">
+            <img src="/img/rouge.svg" alt="rouge" class="mb-[32.12px]">
+            <h3 class="font-title text-lg font-bold">RESSOURCES ET CONSEILS</h3>
+            <p class="font-body text-sm mt-4 leading-[25.6px]">
+                 Accédez à des ressources et des conseils pour développer et pérenniser vos projets culturels.
+            </p>
+        </div>
+        <button class="place-self-center bg-cta px-[45px] py-[14px] rounded-full text-sm font-semibold font-cta">Je soutiens</button>
+    </div>
+
+    <div class="bg-cards bg-cover bg-center h-[1354px] rounded-3xl mt-[124.76px]">
+        <div class="bg-white rounded-3xl grid grid-cols-1 md:grid-cols-3 place-self-center gap-20 mt-[124.44px] mx-[55px]">
+            <h2 class="font-title text-xl font-bold place-self-center py-[52px] px-[45px]">VALORISER ET SOUTENIR LA CULTURE LOCALE</h2>
+            <div class="bg-bleu bg-cover bg-center h-[247.09px] text-secondary">
+                <h3 class="font-title text-lg font-bold">LANCEZ VOTRE PROJET</h3>
+                <p class="font-body text-sm mt-4 leading-[25.6px]">
+                    Présentez vos idées et trouvez le soutien nécessaire pour les concrétiser.
+                </p>
+            </div>
+            <div class="bg-jaune bg-cover bg-center place-self-center h-[247.09px] text-primary">
+                <h3 class="font-title text-lg font-bold">SOUTENEZ DES INITIATIVES</h3>
+                <p class="font-body text-sm mt-4 leading-[25.6px]">
+                    Explorez les projets en cours et apportez votre contribution.
+                </p>
+            </div>
+            <div class="bg-rouge bg-cover bg-center h-[247.09px] text-secondary">
+                <h3 class="font-title text-lg font-bold">COLLABORATIONS LOCALES</h3>
+                <p class="font-body text-sm mt-4 leading-[25.6px]">
+                    Trouvez des partenaires locaux pour développer des initiatives communes.
+                </p>
+            </div>
+            <button class="place-self-center bg-cta px-[45px] py-[14px] rounded-full text-sm font-semibold font-cta">Je soutiens</button>
+        </div>
+    </div>
+
+    <div class="bg-[#92929226] mt-[124px]">
+        <h2 class="font-title text-xl font-bold place-self-center py-[52px] px-[45px]">NOS FUTURS PARTENAIRES</h2>
+        <div class="flex justify-between">
+            <img src="/img/Ministère de la Culture.png" alt="Ministère de la culture">
+            <img src="/img/anct.png" alt="Agence nationale de la cohésion des territoires">
+            <img src="/img/Secrétariat d'Etat.png" alt="Secretariat d'Etat chargé de l'économie sociale, solidaire et responsable">
+        </div>
+    </div>
+
+    <div class="flex flex-col bg-white mt-[124px] place-content-center">
+        <h2 class="font-title text-xl font-bold place-self-center py-[52px] px-[45px]">NOTRE GALERIE</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 place-self-center gap-20 py-[52px] px-[45px]">
+            <img src="/img/galerie1.jpg" alt="galerie1" class="rounded-3xl">
+            <img src="/img/galerie2.jpg" alt="galerie2" class="rounded-3xl">
+            <img src="/img/galerie3.jpg" alt="galerie3" class="rounded-3xl">
+        </div>
+        <button class="place-self-center bg-cta px-[45px] py-[14px] rounded-full text-sm font-semibold font-cta">Voir plus</button>
+    </div>
+
+     <div class="container mx-auto rounded-3xl bg-custom-gradient text-primary text-center mt-16 sm:mt-48">
+        <img src="/img/Tête icone.svg" alt="ci-gît Pablo Picassiette" class="px-[158px] py-[55px]">
+            <p class="text-4xl sm:text-6xl font-black p-8 leading-5">Pour en savoir plus rejoignez notre newsletter</p>
+            {{ form_start(form) }}
+                <div class="flex justify-center mb-6 sm:gap-16">
+                    {{ form_widget(form.email) }}
+                    <button type="submit" class="rounded-full border border-black px-6 py-2 bg-custom-gradient">S'inscrire</button>
+                </div>
+                <div class="text-red-500">
+                    {{ form_errors(form.email) }}
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
 {% endblock %}

@@ -1,5 +1,11 @@
 {
   "build/app.css": "/build/app.css",
   "build/app.js": "/build/app.js",
-  "build/runtime.js": "/build/runtime.js"
+  "build/runtime.js": "/build/runtime.js",
+  "build/images/landing.jpg": "/build/images/landing.63d60122.jpg",
+  "build/images/flou.jpg": "/build/images/flou.d2a060c3.jpg",
+  "build/fonts/THE BOLD FONT - FREE VERSION - 2023.ttf": "/build/fonts/THE BOLD FONT - FREE VERSION - 2023.ttf",
+  "build/images/VectorJaune.svg": "/build/images/VectorJaune.615f7a1f.svg",
+  "build/images/VectorRouge.svg": "/build/images/VectorRouge.149d54b6.svg",
+  "build/images/VectorBleu.svg": "/build/images/VectorBleu.a164c938.svg"
 }

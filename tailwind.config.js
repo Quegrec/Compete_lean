@@ -8,12 +8,25 @@ module.exports = {
     extend: {
       colors: {
         'background': '#F1F9FF',
-        'primary': '#27292E',
+        'primary': '#252525',
+        'secondary': '#DBF1FB',
         'title': '#00062F',
-        'cta': '#11C7D5',
+        'cta': '#F8D595',
+      },
+      backgroundImage: {
+        landing: "url('/public/img/landing.jpg')",
+        cards: "url('/public/img/flou.jpg')",
+        bleu: "url('/public/img/VectorBleu.svg')",
+        jaune: "url('/public/img/VectorJaune.svg')",
+        rouge: "url('/public/img/VectorRouge.svg')",
+      },
+      backgroundSize: {
+        'cover': 'cover',
       },
       fontFamily: {
-        'default': 'Nunito Sans'
+        title: ['THE BOLD FONT', 'sans-serif'],
+        body: ['Questrial', 'sans-serif'],
+        cta: ['Montserrat', 'sans-serif'],
       },
     },
   },
