@@ -25,7 +25,6 @@ class SubscriptionFormType extends AbstractType
             ->add('email', EmailType::class, [
                 'attr' => [
                     'placeholder' => "Entrez votre adresse mail",
-                    'class' => 'bg-[#35CFDB] w-full',
                 ],
                 'constraints' => [
                     new Callback([$this, 'alreadySubscribed'])
