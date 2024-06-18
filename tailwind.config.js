@@ -24,8 +24,8 @@ module.exports = {
         'cover': 'cover',
       },
       fontFamily: {
-        title: ['THE BOLD FONT', 'sans-serif'],
-        body: ['Questrial', 'sans-serif'],
+        title: ['THEBOLDFONT', 'sans-serif'],
+        content: ['Questrial', 'sans-serif'],
         cta: ['Montserrat', 'sans-serif'],
       },
     },
