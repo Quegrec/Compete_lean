@@ -1,4 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './fonts.css'
+@import './fonts.css';
+
+.bg-custom-gradient {
+    background: linear-gradient(
+        90deg,
+        rgba(254, 183, 55, 0.7) 0%,
+        rgba(254, 218, 154, 0.7) 23.5%,
+        rgba(196, 216, 200, 0.7) 69%,
+        rgba(92, 134, 102, 0.7) 100%
+    );
+}

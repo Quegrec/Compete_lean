@@ -5,20 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <style>
-        @layer utilities {
-            .bg-custom-gradient {
-                background: linear-gradient(
-                    90deg,
-                    rgba(254, 183, 55, 0.7) 0%,
-                    rgba(254, 218, 154, 0.7) 23.5%,
-                    rgba(196, 216, 200, 0.7) 69%,
-                    rgba(92, 134, 102, 0.7) 100%
-                );
-            }
-        }
-    </style>
-    
+
     <div class="flex flex-col bg-landing bg-cover bg-center h-screen px-[55px]">
         <div class="lg:w-[639px]">
             <h1 class="text-white font-title text-4xl lg:text-[62px] lg:leading-[80.6px] my-[110px] mt-[238px]">la plateforme de dynamisation culturelle locale</h1>
@@ -74,7 +61,7 @@
 
     <div class="flex flex-col text-primary mt-[444px] px-[76px] gap-[124px]">
         <h2 class="text-primary font-title text-2xl lg:text-4xl place-self-center lg:place-self-start">faciliter les projets culturels</h2>
-        <div= class="flex flex-col lg:flex-row lg:justify-between">
+        <div class="flex flex-col lg:flex-row lg:justify-between">
             <div class="flex flex-col w-[320px]">
                 <img loading="lazy" src="/img/bleu.svg" alt="bleu" class="mb-[32.12px]">
                 <h3 class="font-title text-2xl">aide au financement</h3>
@@ -132,9 +119,9 @@
     <div class="bg-[#92929226] mt-[124px]">
         <h2 class="font-title text-xl lg:text-2xl text-center py-[52px] px-[45px]">nos futurs partenaires</h2>
         <div class="flex justify-between lg:justify-center lg:gap-20">
-            <img loading="lazy" src="/img/ministere de la culture.svg" alt="Ministère de la culture">
-            <img loading="lazy" src="/img/anct.svg" alt="Agence nationale de la cohésion des territoires">
-            <img loading="lazy" src="/img/secretariat detat ssr.svg" alt="Secretariat d'Etat chargé de l'économie sociale, solidaire et responsable">
+            <img loading="lazy" src="/img/minister_culture.svg" alt="Ministère de la culture">
+            <img loading="lazy" src="/img/ANCT.svg" alt="Agence nationale de la cohésion des territoires">
+            <img loading="lazy" src="/img/secretariat_ssr.svg" alt="Secretariat d'Etat chargé de l'économie sociale, solidaire et responsable">
         </div>
     </div>
 
@@ -151,13 +138,13 @@
     </div> #}
 
      <div class="rounded-3xl bg-custom-gradient text-primary text-center mt-28 mx-2 lg:mx-[71px]">
-        <img loading="lazy" src="/img/Tête icone.svg" alt="notre mascotte" class="lg:hidden block px-[158px] py-[55px]">
-        <img loading="lazy" src="/img/Tête icone.svg" alt="notre mascotte" class="hidden lg:flex h-40 w-40 relative top-[95px] left-[30px]">
+        <img loading="lazy" src="/img/face_icon.svg" alt="notre mascotte" class="lg:hidden block px-[158px] py-[55px]">
+        <img loading="lazy" src="/img/face_icon.svg" alt="notre mascotte" class="hidden lg:flex h-40 w-40 relative top-[95px] left-[30px]">
         <p class="text-2xl lg:text-3xl font-title leading-5">Pour en savoir plus rejoignez notre newsletter</p>
         {{ form_start(form) }}
             <div class="flex justify-center py-14 gap-4">
                 {{ form_widget(form.email, {'attr': {'class': 'rounded-full border border-black px-6 py-2 bg-transparent lg:w-[550px]'} } ) }}
-                <button type="submit" class="rounded-full border border-black px-6 py-2 bg-custom-gradient">S'inscrire</button>
+                <button type="submit" class="rounded-full border border-black px-6 py-2 bg-transparent">S'inscrire</button>
             </div>
             <div class="text-red-500">
                 {{ form_errors(form.email) }}

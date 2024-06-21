@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./assets/**/*.js",
+    "../public/img/*[.jpg, .svg]",
     "./templates/**/*.html.twig"
   ],
   theme: {

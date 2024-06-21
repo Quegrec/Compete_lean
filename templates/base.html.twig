@@ -10,11 +10,11 @@
         gtag('config', 'G-FJQZRP5J2L');
         </script>
         <meta charset="UTF-8">
-        <meta name="description" content="Curious Creators vous présente son site en construction" />
+        <meta name="description" content="Curious Creators vous présente son site en construction">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Curious Creators">
         <title>{% block title %}CultuRally{% endblock %}</title>
-        <link rel="icon" href="img/CULTURALLY_V2_LOGO.svg">
+        <link rel="icon" href="img/Logo.svg">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -33,9 +33,7 @@
             {% block body %}{% endblock %}
         </div>
 
-        <div class="mt-auto">
-            {% include 'shared/footer.html.twig' %}
-        </div>
+        {% include 'shared/footer.html.twig' %}
 
     </body>
 </html>
