@@ -5,13 +5,14 @@
 {% endblock %}
 
 {% block body %}
-<div class="container mx-auto px-4 py-8 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+<div class="container mx-auto px-4 py-8 grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 pt-48">
 
     {% if app.user and app.user.roles == ['ROLE_ADMIN'] %}
         <a href="/admin/new-post" class="bg-primary text-white p-4 rounded-lg text-center">Ajouter une actualité</a>
     {% endif %}
 
     {% for post in posts %}
+
         <div class="relative bg-cover bg-center h-64 rounded-lg shadow-lg" style="background-image: url('{{ asset('img/Posts/' ~ post.picture) }}');">
             <a href="/actualite/{{ post.slug }}" class="absolute inset-0 flex items-end bg-black bg-opacity-50 text-white rounded-lg">
                 <div class="p-4 w-full text-center">
@@ -19,6 +20,7 @@
                 </div>
             </a>
         </div>
+        
     {% endfor %}
 </div>
 {% endblock %}
