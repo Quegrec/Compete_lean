@@ -31,11 +31,11 @@ Encore
     })
 
     // Copy images
-    // .copyFiles({
-    //     from: './public/img',
-    //     to: 'images/[path][name].[ext]',
-    //     pattern: /\.(png|jpg|jpeg|svg|gif|ico)$/,
-    // })
+    .copyFiles({
+        from: './public/img',
+        to: 'images/[path][name].[ext]',
+        pattern: /\.(jpg|jpeg|svg)$/,
+    })
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
