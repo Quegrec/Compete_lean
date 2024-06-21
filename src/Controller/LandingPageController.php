@@ -12,9 +12,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-class HomePageController extends AbstractController
+class LandingPageController extends AbstractController
 {
-    #[Route('/', name: 'homepage')]
+    #[Route('/', name: 'landingPage')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         $newsletterSubscription = new NewsletterSubscriber();
@@ -26,7 +26,7 @@ class HomePageController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->render('homepage.html.twig', [
+        return $this->render('landingPage.html.twig', [
             'form' => $form->createView(),
         ]);
 

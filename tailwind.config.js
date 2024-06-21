@@ -16,9 +16,9 @@ module.exports = {
       backgroundImage: {
         landing: "url('/public/img/landing.jpg')",
         cards: "url('/public/img/flou.jpg')",
-        bleu: "url('/public/img/VectorBleu.svg')",
-        jaune: "url('/public/img/VectorJaune.svg')",
-        rouge: "url('/public/img/VectorRouge.svg')",
+        bleu: "url('/public/img/post_it_bleu.svg')",
+        jaune: "url('/public/img/post_it_jaune.svg')",
+        rouge: "url('/public/img/post_it_rouge.svg')",
       },
       backgroundSize: {
         'cover': 'cover',
@@ -32,4 +32,3 @@ module.exports = {
   },
   plugins: [],
 }
-

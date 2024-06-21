@@ -23,12 +23,19 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
-        {# <div class="fixed sm:block top-0 left-0 w-full z-50"></div> #} <!-- Si jamais le header doit etre fixé -->
-        {% include "shared/header.html.twig" %}
+    <body class="min-h-screen flex flex-col">
+    
+        <div class="fixed lg:block top-0 left-0 w-full z-50">
+            {% include "shared/header.html.twig" %}
+        </div>
 
-        {% block body %}{% endblock %}
-        
-        {% include 'shared/footer.html.twig' %}
+        <div class="flex-grow">
+            {% block body %}{% endblock %}
+        </div>
+
+        <div class="mt-auto">
+            {% include 'shared/footer.html.twig' %}
+        </div>
+
     </body>
 </html>

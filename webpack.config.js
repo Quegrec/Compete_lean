@@ -23,12 +23,19 @@ Encore
      */
     .addEntry('app', './assets/app.js')
         
-    // Copy fonts to the output directory
+    // Copy fonts
     .copyFiles({
         from: './assets/fonts',
         to: 'fonts/[path][name].[ext]',
-        pattern: /\.(woff|woff2|ttf|eot|svg)$/
+        pattern: /\.(woff|woff2|ttf|eot|svg)$/,
     })
+
+    // Copy images
+    // .copyFiles({
+    //     from: './public/img',
+    //     to: 'images/[path][name].[ext]',
+    //     pattern: /\.(png|jpg|jpeg|svg|gif|ico)$/,
+    // })
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
