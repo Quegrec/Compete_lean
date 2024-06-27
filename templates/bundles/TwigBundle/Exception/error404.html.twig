@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<main class="max-h-screen bg-[#FFF3E1] grid grid-cols-2">
+    <div class="place-self-center gap mt-96">
+        <h1 class="font-title text-5xl mb-20">erreur 404 !</h1>
+        <h2 class="font-title text-3xl mb-10">Oups, La page que vous cherchez n'existe pas...</h2>
+        <p class="font-content text-xl mb-48">Il se peut que vous ayez mal saisi l'URL ou que la page ait été déplacée.</p>
+        <a href="/" class="bg-cta px-[45px] py-[14px] rounded-full text-sm font-cta">Retour à l'accueil</a>
+    </div>
+    <img src="/img/404.svg" alt="erreur 404" class="place-self-center w-3/6">
+</main>
+
+{% endblock %}

@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class LoginFormType extends AbstractType
@@ -16,11 +17,12 @@ class LoginFormType extends AbstractType
                     'class' => 'py-2 border border-black rounded-md',
                 ],
             ])
-            ->add('password', null, [
+            ->add('password', PasswordType::class, [
                 'label' => 'Mot de passe :',
                 'attr' => [
                     'class' => 'py-2 border border-black rounded-md',
                 ],
+                'mapped' => false,
             ]);
     }
 }

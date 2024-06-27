@@ -34,9 +34,9 @@ class PostsController extends AbstractController
             'slug' => $slug
         ]);
 
-        if(!$post){
-            throw $this->createNotFoundException("Le produit n'existe pas");
-        }
+        // if(!$post){
+        //     throw $this->createNotFoundException("Le produit n'existe pas");
+        // }
 
         return $this->render('post/show.html.twig', [
             'post' => $post

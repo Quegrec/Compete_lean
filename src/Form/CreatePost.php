@@ -24,6 +24,10 @@ class CreatePost extends AbstractType
                 ],
             ])
             ->add('description', TextareaType::class, [
+                'attr' => [
+                    'class' => 'tinymce',
+                    'rows' => 5,
+                ],
                 'constraints' => [
                     new Length(['min' => 10]),
                 ],

@@ -1,0 +1,74 @@
+{% extends "base.html.twig" %}
+{% block title %}Events{% endblock %}
+
+{% block body %}
+<div class="container mt-80 mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Events</h1>
+
+    <form method="get" action="{{ path('event_index') }}" class="mb-6">
+        <div class="flex flex-wrap -mx-2">
+            <div class="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+                <label for="location" class="block text-gray-700">Ville:</label>
+                <input type="text" name="location" id="location" value="{{ app.request.query.get('location') }}" class="w-full px-4 py-2 border rounded-lg">
+            </div>
+
+            <div class="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+                <label for="date" class="block text-gray-700">Date:</label>
+                <input type="date" name="date" id="date" value="{{ app.request.query.get('date') }}" class="w-full px-4 py-2 border rounded-lg">
+            </div>
+
+            <div class="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+                <label for="type" class="block text-gray-700">Type:</label>
+                {# <select name="type" id="type" class="w-full px-4 py-2 border rounded-lg">
+                    <option value="">Tous</option>
+                    {% set uniqueTypes = events|map(event => event.type)|unique %}
+                    {% for type in uniqueTypes %}
+                        <option value="{{ type }}" {% if app.request.query.get('type') == type %}selected{% endif %}>{{ type }}</option>
+                    {% endfor %}
+                </select> #}
+            </div>
+
+            <div class="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+                <label for="price" class="block text-gray-700">Prix maximum:</label>
+                <input type="number" name="price" id="price" value="{{ app.request.query.get('price') }}" class="w-full px-4 py-2 border rounded-lg">
+            </div>
+        </div>
+
+        <div class="flex justify-end">
+            <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Filtrer</button>
+        </div>
+    </form>
+
+    <table class="table-auto w-full">
+        <thead>
+            <tr>
+                <th class="px-4 py-2 text-left">Name</th>
+                <th class="px-4 py-2 text-left">Location</th>
+                <th class="px-4 py-2 text-left">Date</th>
+                <th class="px-4 py-2 text-left">Price</th>
+                <th class="px-4 py-2 text-left">Type</th>
+                <th class="px-4 py-2 text-left">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in events %}
+                <tr class="border-t">
+                    <td class="px-4 py-2">{{ event.name }}</td>
+                    <td class="px-4 py-2">{{ event.location }}</td>
+                    <td class="px-4 py-2">{{ event.date|date('d/m/Y') }}</td>
+                    <td class="px-4 py-2">{{ event.price }}</td>
+                    <td class="px-4 py-2">{{ event.type }}</td>
+                    <td class="px-4 py-2">
+                        {# <a href="{{ path('event_show', {'slug': event.slug}) }}" class="text-blue-500 hover:underline">Show</a>
+                        <a href="{{ path('event_edit', {'id': event.id}) }}" class="text-yellow-500 hover:underline ml-4">Edit</a> #}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td class="px-4 py-2 text-center" colspan="6">No records found</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

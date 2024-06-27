@@ -9,15 +9,14 @@
         <div class="flex flex-col text-center">
             {{form_label(loginForm.name)}}
             {{form_widget(loginForm.name)}}
-            {{form_errors(loginForm.name)}}
                 
             {{form_label(loginForm.password)}}
             {{form_widget(loginForm.password)}}
-            {{form_errors(loginForm.password)}}
-            <button type="submit" class="rounded-full px-6 py-2 my-4 bg-primary text-white">Connexion</button>
+            {{form_errors(loginForm)}}
+            <button type="submit" class="rounded-full px-6 py-2 my-4 bg-primary text-white">Me connecter</button>
         {{form_end(loginForm)}}
         </div>
-        <a href="">Pas encore inscrit ?</a>
-        <a href="">Mot de passe oublié ?</a>
+        {# <a href="">Pas encore inscrit ?</a>
+        <a href="">Mot de passe oublié ?</a> #}
     </div>
 {% endblock %}
