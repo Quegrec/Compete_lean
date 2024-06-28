@@ -13,13 +13,14 @@ module.exports = {
         'title': '#00062F',
         'cta': '#F8D595',
       },
-      backgroundImage: {
+      backgroundImage: (theme) => ({
         landing: "url('/public/img/landing.jpg')",
         cards: "url('/public/img/flou.jpg')",
         bleu: "url('/public/img/post_it_bleu.svg')",
         jaune: "url('/public/img/post_it_jaune.svg')",
         rouge: "url('/public/img/post_it_rouge.svg')",
-      },
+        lorem: "url('https://picsum.photos/400/200')",
+      }),
       backgroundSize: {
         'cover': 'cover',
       },

@@ -1,0 +1,63 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ event.name }}{% endblock %}
+
+{% block body %}
+<div class="container mt-80 mx-auto">
+    <div class="bg-white rounded-lg shadow-lg">
+        <div class="relative">
+            <div class="h-48 rounded-t-lg"
+                style="background-image: url('https://picsum.photos/800/200?random={{ event.id }}'); background-size: cover; background-position: center;"> 
+                <!-- mesure purement temporaire me frappes pas -->
+            </div>
+            <div class="absolute top-0 left-0 p-2 bg-gray-800 text-white rounded-tr-lg">
+                {{ event.type }}
+            </div>
+            <div class="absolute top-0 right-0 p-2 bg-white text-gray-800 rounded-tl-lg">
+                {{ event.price }} €
+            </div>
+        </div>
+        <div class="p-6">
+            <h1 class="text-2xl font-bold mb-2">{{ event.name }}</h1>
+            <p class="text-gray-700 mb-2"><strong>Lieu:</strong> {{ event.location }}</p>
+            <p class="text-gray-700 mb-2"><strong>Date:</strong> {{ event.date|date('d/m/Y') }}</p>
+            <p class="text-gray-700 mb-4"><strong>Prix:</strong> {{ event.price }} €</p>
+            <p class="text-gray-700 mb-4">{{ event.description }}</p>
+
+            <div class="flex items-center justify-between">
+                <a href="{{ path('event_index') }}" class="text-blue-500 hover:underline">Retour aux événements</a>
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Acheter des billets</a>
+            </div>
+        </div>
+    </div>
+
+    {# Section for related events (optional) #}
+    <div class="mt-10">
+        <h2 class="text-xl font-bold mb-4">Événements similaires</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for similarEvent in similarEvents %}
+            <div class="bg-white rounded-lg shadow-lg">
+                <div class="relative">
+                    <div class="h-48 rounded-t-lg"
+                        style="background-image: url('https://picsum.photos/400/200?random={{ similarEvent.id }}'); background-size: cover; background-position: center;"> 
+                        <!-- mesure purement temporaire me frappes pas -->
+                    </div>
+                    <div class="absolute top-0 left-0 p-2 bg-gray-800 text-white rounded-tr-lg">
+                        {{ similarEvent.type }}
+                    </div>
+                    <div class="absolute top-0 right-0 p-2 bg-white text-gray-800 rounded-tl-lg">
+                        {{ similarEvent.price }} €
+                    </div>
+                </div>
+                <a href="{{ path('event_detail', {'slug': similarEvent.slug}) }}" class="p-4">
+                    <h3 class="text-lg font-bold mb-2">{{ similarEvent.name }}</h3>
+                    <p class="text-gray-700 mb-2">{{ similarEvent.location }}</p>
+                    <p class="text-gray-700 mb-2">{{ similarEvent.date|date('d/m/Y') }}</p>
+                </a>
+            </div>
+            {% else %}
+            <div class="text-center text-gray-700 mt-4" colspan="6">Aucun événement similaire trouvé</div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
