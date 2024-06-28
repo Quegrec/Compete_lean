@@ -17,7 +17,7 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+    <div class="hidden w-full md:block md:w-auto flex-col-reverse" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0">
         
         <li>
@@ -37,7 +37,9 @@
 
     <div class="hidden lg:flex justify-end gap-8 mr-[52px]">
       <div class="flex gap-4">
-        <img src="img/Panier.svg" alt="Mon panier">
+        <a href="/evenements" class="w-full place-content-center">
+          <img src="img/Panier.svg" alt="Mon panier">
+        </a>
         <img src="img/Cloche.svg" alt="Mes alertes">
       </div>
       {% if app.user %}
