@@ -27,6 +27,8 @@ class EventController extends AbstractController
         $date = $request->query->get('date');
         $type = $request->query->get('type');
         $price = $request->query->get('price');
+        $page = max(1, (int)$request->query->get('page', 1));
+        $limit = 9;
 
         // Filter events
         $filteredEvents = array_filter($events, function ($event) use ($location, $date, $type, $price) {
@@ -36,12 +38,20 @@ class EventController extends AbstractController
                 && (!$price || $event['price'] <= (int)$price);
         });
 
+        // Paginate filtered events
+        $totalEvents = count($filteredEvents);
+        $totalPages = ceil($totalEvents / $limit);
+        $offset = ($page - 1) * $limit;
+        $paginatedEvents = array_slice($filteredEvents, $offset, $limit);
+
         // Extract unique event types
         $uniqueTypes = array_unique(array_column($filteredEvents, 'type'));
 
         return $this->render('event/index.html.twig', [
-            'events' => $filteredEvents,
+            'events' => $paginatedEvents,
             'uniqueTypes' => $uniqueTypes,
+            'currentPage' => $page,
+            'totalPages' => $totalPages,
         ]);
 
     }
@@ -64,13 +74,41 @@ class EventController extends AbstractController
     }
 
     // étapes dans la billetterie (optionnelle si pas le temps de la faire)
-    #[Route('/evenements/{slug}/{id}', name: 'etape')]
-    public function edit($slug)
+    #[Route('/evenements/{slug}/billeterie', name: 'event_billeterie')]
+    public function purchase($slug)
     {
-        return $this->render('event/etapes.html.twig', [
-            'slug' => $slug,
+        $event = $this->fakeEventService->getEventBySlug($slug);
+
+        if (!$event) {
+            throw $this->createNotFoundException('The event does not exist');
+        }
+
+        return $this->render('event/billeterie.html.twig', [
+            'event' => $event
         ]);
     }
+
+    // Page de confirmation de l'achat (optionnelle si pas le temps de la faire)
+    #[Route('/evenements/{slug}/confirmation', name: 'event_confirmation')]
+    public function confirmation($slug, Request $request)
+    {
+        $event = $this->fakeEventService->getEventBySlug($slug);
+        $quantity = $request->request->get('quantity');
+
+        if (!$event) {
+            throw $this->createNotFoundException('The event does not exist');
+        }
+
+        // Handle payment logic here
+        // For now, just render a confirmation page
+
+        return $this->render('event/confirmation.html.twig', [
+            'event' => $event,
+            'quantity' => $quantity
+        ]);
+    }
+
+
 
     // Dashboard de l'association avec les événements qu'elle a créé (en cours, passés, à venir)
     #[Route('/mes-evenements', name: 'mes_evenements')]

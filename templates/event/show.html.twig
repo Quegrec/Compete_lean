@@ -25,12 +25,12 @@
 
             <div class="flex items-center justify-between">
                 <a href="{{ path('event_index') }}" class="text-blue-500 hover:underline">Retour aux événements</a>
-                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Acheter des billets</a>
+                <a href="{{ path('event_billeterie', {'slug': event.slug}) }}" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Acheter des billets</a>
             </div>
         </div>
     </div>
 
-    {# Section for related events (optional) #}
+    {# Section des évenements similaires (même type) et voir si je peux faire évenements proches ensuite #}
     <div class="mt-10">
         <h2 class="text-xl font-bold mb-4">Événements similaires</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
