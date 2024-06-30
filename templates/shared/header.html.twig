@@ -1,12 +1,12 @@
 <nav class="bg-background rounded-b-2xl lg:mx-20 lg:rounded-full lg:mt-[66px]">
   <div class="flex flex-wrap items-center justify-between p-4">
     <a href="/">
-        <img src="img/Logo.svg" class="h-12 pl-8" alt="CultuRally Logo">
+        <img src="{{ asset('img/Logo.svg') }}" class="h-12 pl-8" alt="CultuRally Logo">
     </a>
 
     <div class="flex items-center justify-center p-4">
       <div class="hidden lg:flex items-center rounded-full border border-black bg-transparent">
-          <img src="img/Loupe.svg" alt="icon de recherche" class="px-4">
+          <img src="{{ asset('img/Loupe.svg') }}" alt="icon de recherche" class="px-4">
           <input type="text" placeholder="Recherche" class="bg-transparent border-none outline-none px-4 py-2 w-64">
       </div>
     </div>
@@ -38,14 +38,14 @@
     <div class="hidden lg:flex justify-end gap-8 mr-[52px]">
       <div class="flex gap-4">
         <a href="/evenements" class="w-full place-content-center">
-          <img src="img/Panier.svg" alt="Mon panier">
+          <img src="{{ asset('img/Panier.svg') }}" alt="Mon panier">
         </a>
-        <img src="img/Cloche.svg" alt="Mes alertes">
+        <img src="{{ asset('img/Cloche.svg') }}" alt="Mes alertes">
       </div>
       {% if app.user %}
-        <a href="/logout"><img src="img/profile.svg" alt="Mon profile"></a>
+        <a href="/logout"><img src="{{ asset('img/profile.svg') }}" alt="Mon profile"></a>
       {% else %}
-        <a href="/login"><img src="img/profile.svg" alt="Mon profile"></a>
+        <a href="/login"><img src="{{ asset('img/profile.svg') }}" alt="Mon profile"></a>
       {% endif %}
     </div>
 

@@ -7,51 +7,502 @@ class FakeEventService
     public function getEvents()
     {
         return [
-            ['id' => 1, 'name' => 'Festival de Musique Folk', 'date' => '2025-07-05', 'location' => 'Conques', 'price' => 25, 'type' => 'Festival', 'organizer' => 'Association des Amis de Conques', 'description' => 'Découvrez le charme unique du Festival de Musique Folk à Conques. Profitez de performances musicales en plein air dans un cadre pittoresque, accompagnées d\'animations culturelles et de délices culinaires locaux.', 'slug' => 'festival-de-musique-folk-conques-2025-07-05'],
-            ['id' => 2, 'name' => 'Marché de Nuit', 'date' => '2025-07-10', 'location' => 'Gordes', 'price' => 5, 'type' => 'Marché', 'organizer' => 'Les Artisans de Gordes', 'description' => 'Explorez le marché de nuit animé à Gordes, où l\'artisanat local rencontre la gastronomie provençale. Promenez-vous sous les étoiles et découvrez des trésors artisanaux uniques.', 'slug' => 'marche-de-nuit-gordes-2025-07-10'],
-            ['id' => 3, 'name' => 'Projection de Cinéma en Plein Air', 'date' => '2025-07-12', 'location' => 'Rochefort-en-Terre', 'price' => 0, 'type' => 'Cinéma', 'organizer' => 'Cinéma Libre', 'description' => 'Plongez dans l\'atmosphère magique d\'une projection de cinéma en plein air à Rochefort-en-Terre. Profitez de grands classiques du cinéma sous le ciel étoilé.', 'slug' => 'projection-de-cinema-en-plein-air-rochefort-en-terre-2025-07-12'],
-            ['id' => 4, 'name' => 'Atelier de Peinture', 'date' => '2025-07-15', 'location' => 'Monpazier', 'price' => 15, 'type' => 'Atelier', 'organizer' => 'Ateliers d\'Art de Monpazier', 'description' => 'Explorez votre créativité lors de notre atelier de peinture à Monpazier. Que vous soyez débutant ou artiste expérimenté, nos artistes vous guideront pour créer votre chef-d\'œuvre.', 'slug' => 'atelier-de-peinture-monpazier-2025-07-15'],
-            ['id' => 5, 'name' => 'Conférence sur le Développement Durable', 'date' => '2025-07-20', 'location' => 'Riquewihr', 'price' => 10, 'type' => 'Conférence', 'organizer' => 'Riquewihr Écologie', 'description' => 'Participez à notre conférence sur le développement durable à Riquewihr. Explorez les initiatives locales et découvrez comment agir pour préserver notre environnement.', 'slug' => 'conference-sur-le-developpement-durable-riquewihr-2025-07-20'],
-            ['id' => 6, 'name' => 'Exposition d\'Art Contemporain', 'date' => '2025-07-22', 'location' => 'Lourmarin', 'price' => 12, 'type' => 'Exposition', 'organizer' => 'Art Contemporain Lourmarin', 'description' => 'Admirez les œuvres fascinantes d\'artistes contemporains lors de notre exposition à Lourmarin. Plongez dans l\'expression artistique moderne au cœur de la Provence.', 'slug' => 'exposition-d-art-contemporain-lourmarin-2025-07-22'],
-            ['id' => 7, 'name' => 'Spectacle de Danse', 'date' => '2025-07-25', 'location' => 'Collonges-la-Rouge', 'price' => 20, 'type' => 'Spectacle', 'organizer' => 'Troupe de Danse Collonges', 'description' => 'Découvrez un spectacle de danse envoûtant à Collonges-la-Rouge, où la tradition rencontre la passion. Vivez une soirée artistique inoubliable au cœur d\'un village historique.', 'slug' => 'spectacle-de-danse-collonges-la-rouge-2025-07-25'],
-            ['id' => 8, 'name' => 'Balade Contée', 'date' => '2025-07-28', 'location' => 'Saint-Cirq-Lapopie', 'price' => 8, 'type' => 'Balade', 'organizer' => 'Les Amis de Saint-Cirq', 'description' => 'Explorez les légendes et histoires de Saint-Cirq-Lapopie lors de notre balade contée. Plongez dans le patrimoine culturel de ce village perché sur les falaises du Lot.', 'slug' => 'balade-contee-saint-cirq-lapopie-2025-07-28'],
-            ['id' => 9, 'name' => 'Fête de la Lavande', 'date' => '2025-07-30', 'location' => 'Sault', 'price' => 0, 'type' => 'Fête', 'organizer' => 'Sault Lavande', 'description' => 'Célébrez la lavande lors de notre fête annuelle à Sault. Découvrez les secrets de cette fleur emblématique de Provence à travers des démonstrations, des expositions et des activités festives.', 'slug' => 'fete-de-la-lavande-sault-2025-07-30'],
-            ['id' => 10, 'name' => 'Concert de Musique Classique', 'date' => '2025-07-07', 'location' => 'Eguisheim', 'price' => 18, 'type' => 'Concert', 'organizer' => 'Orchestre d\'Eguisheim', 'description' => 'Détendez-vous avec un concert de musique classique à Eguisheim. Laissez-vous séduire par des interprétations magnifiques dans un cadre enchanteur.', 'slug' => 'concert-de-musique-classique-eguisheim-2025-07-07'],
-            ['id' => 11, 'name' => 'Festival de Théâtre Amateur', 'date' => '2025-07-14', 'location' => 'Conques', 'price' => 12, 'type' => 'Festival', 'organizer' => 'Théâtre Amateur Conques', 'description' => 'Venez assister à des performances théâtrales variées lors de notre festival à Conques. Découvrez des talents locaux et plongez dans des histoires captivantes.', 'slug' => 'festival-de-theatre-amateur-conques-2025-07-14'],
-            ['id' => 12, 'name' => 'Marché Artisanal', 'date' => '2025-07-11', 'location' => 'Gordes', 'price' => 3, 'type' => 'Marché', 'organizer' => 'Artisans de Gordes', 'description' => 'Explorez notre marché artisanal à Gordes, où les créateurs locaux vous proposent leurs œuvres uniques. Découvrez l\'artisanat provençal dans une ambiance conviviale.', 'slug' => 'marche-artisanal-gordes-2025-07-11'],
-            ['id' => 13, 'name' => 'Cinéma en Plein Air', 'date' => '2025-07-12', 'location' => 'Rochefort-en-Terre', 'price' => 0, 'type' => 'Cinéma', 'organizer' => 'Cinéma Libre', 'description' => 'Profitez d\'une soirée cinéma en plein air à Rochefort-en-Terre. Détendez-vous et profitez des grands classiques du cinéma sous le ciel étoilé.', 'slug' => 'cinema-en-plein-air-rochefort-en-terre-2025-07-12'],
-            ['id' => 14, 'name' => 'Atelier de Sculpture', 'date' => '2025-07-16', 'location' => 'Monpazier', 'price' => 20, 'type' => 'Atelier', 'organizer' => 'Sculpteurs de Monpazier', 'description' => 'Découvrez les techniques de sculpture lors de notre atelier à Monpazier. Créez votre propre œuvre sous la direction de nos artistes expérimentés.', 'slug' => 'atelier-de-sculpture-monpazier-2025-07-16'],
-            ['id' => 15, 'name' => 'Conférence sur l\'Art Médiéval', 'date' => '2025-07-21', 'location' => 'Riquewihr', 'price' => 8, 'type' => 'Conférence', 'organizer' => 'Riquewihr Patrimoine', 'description' => 'Explorez l\'art médiéval lors de notre conférence à Riquewihr. Découvrez les chefs-d\'œuvre de cette période fascinante et plongez dans l\'histoire artistique.', 'slug' => 'conference-sur-l-art-medieval-riquewihr-2025-07-21'],
-            ['id' => 16, 'name' => 'Exposition de Photographie', 'date' => '2025-07-23', 'location' => 'Lourmarin', 'price' => 10, 'type' => 'Exposition', 'organizer' => 'Photographes de Lourmarin', 'description' => 'Admirez les œuvres captivantes de nos photographes locaux lors de notre exposition à Lourmarin. Des moments figés dans le temps qui captureront votre imagination.', 'slug' => 'exposition-de-photographie-lourmarin-2025-07-23'],
-            ['id' => 17, 'name' => 'Spectacle de Théâtre', 'date' => '2025-07-26', 'location' => 'Collonges-la-Rouge', 'price' => 15, 'type' => 'Spectacle', 'organizer' => 'Théâtre de Collonges', 'description' => 'Assistez à un spectacle de théâtre en plein cœur de Collonges-la-Rouge. Vivez des émotions fortes avec des acteurs talentueux dans un cadre historique.', 'slug' => 'spectacle-de-theatre-collonges-la-rouge-2025-07-26'],
-            ['id' => 18, 'name' => 'Balade Nature', 'date' => '2025-07-29', 'location' => 'Saint-Cirq-Lapopie', 'price' => 5, 'type' => 'Balade', 'organizer' => 'Nature et Découverte', 'description' => 'Explorez la nature lors d\'une balade à Saint-Cirq-Lapopie. Découvrez la faune et la flore locales avec nos guides passionnés.', 'slug' => 'balade-nature-saint-cirq-lapopie-2025-07-29'],
-            ['id' => 19, 'name' => 'Fête Médiévale', 'date' => '2025-07-31', 'location' => 'Sault', 'price' => 5, 'type' => 'Fête', 'organizer' => 'Les Amis de Sault', 'description' => 'Plongez dans l\'ambiance du Moyen Âge lors de notre fête médiévale à Sault. Spectacles, animations et marché médiéval vous transporteront dans le temps.', 'slug' => 'fete-medievale-sault-2025-07-31'],
-            ['id' => 20, 'name' => 'Concert de Jazz', 'date' => '2025-07-08', 'location' => 'Eguisheim', 'price' => 20, 'type' => 'Concert', 'organizer' => 'Jazz Club Eguisheim', 'description' => 'Venez savourer un concert de jazz en plein air à Eguisheim. Laissez-vous emporter par les rythmes entraînants et les mélodies envoûtantes.', 'slug' => 'concert-de-jazz-eguisheim-2025-07-08'],
-            ['id' => 21, 'name' => 'Festival de Musique Pop', 'date' => '2025-07-09', 'location' => 'Eguisheim', 'price' => 15, 'type' => 'Festival', 'organizer' => 'Association de Musique Pop Eguisheim', 'description' => 'Vivez une journée de musique entraînante lors de notre festival à Eguisheim. Découvrez des artistes locaux et internationaux dans une ambiance festive et conviviale.', 'slug' => 'festival-de-musique-pop-eguisheim-2025-07-09'],
-            ['id' => 22, 'name' => 'Marché Nocturne', 'date' => '2025-07-13', 'location' => 'Gordes', 'price' => 5, 'type' => 'Marché', 'organizer' => 'Artisans Gourmands de Gordes', 'description' => 'Profitez d\'une soirée gourmande au marché nocturne de Gordes. Découvrez les saveurs locales et rencontrez les artisans passionnés de gastronomie provençale.', 'slug' => 'marche-nocturne-gordes-2025-07-13'],
-            ['id' => 23, 'name' => 'Ciné-Rétro', 'date' => '2025-07-19', 'location' => 'Riquewihr', 'price' => 5, 'type' => 'Cinéma', 'organizer' => 'Association Ciné-Rétro Riquewihr', 'description' => 'Revivez l\'âge d\'or du cinéma lors de notre soirée Ciné-Rétro à Riquewihr. Découvrez des classiques du cinéma projetés dans une ambiance rétro.', 'slug' => 'cine-retro-riquewihr-2025-07-19'],
-            ['id' => 24, 'name' => 'Atelier de Calligraphie', 'date' => '2025-07-17', 'location' => 'Monpazier', 'price' => 18, 'type' => 'Atelier', 'organizer' => 'Maîtres de la Calligraphie', 'description' => 'Apprenez l\'art de la calligraphie lors de notre atelier à Monpazier. Explorez les techniques anciennes et créez des œuvres d\'art avec nos calligraphes expérimentés.', 'slug' => 'atelier-de-calligraphie-monpazier-2025-07-17'],
-            ['id' => 25, 'name' => 'Conférence sur l\'Architecture Moderne', 'date' => '2025-07-24', 'location' => 'Lourmarin', 'price' => 10, 'type' => 'Conférence', 'organizer' => 'Association d\'Architecture Lourmarin', 'description' => 'Explorez l\'architecture moderne lors de notre conférence à Lourmarin. Découvrez les influences et les innovations qui façonnent notre environnement urbain.', 'slug' => 'conference-sur-l-architecture-moderne-lourmarin-2025-07-24'],
-            ['id' => 26, 'name' => 'Festival de Danse Contemporaine', 'date' => '2025-07-27', 'location' => 'Collonges-la-Rouge', 'price' => 15, 'type' => 'Festival', 'organizer' => 'Danse Contemporaine Collonges', 'description' => 'Découvrez la créativité de la danse contemporaine lors de notre festival à Collonges-la-Rouge. Assistez à des performances captivantes dans un décor architectural exceptionnel.', 'slug' => 'festival-de-danse-contemporaine-collonges-la-rouge-2025-07-27'],
-            ['id' => 27, 'name' => 'Randonnée Culturelle', 'date' => '2025-07-28', 'location' => 'Saint-Cirq-Lapopie', 'price' => 5, 'type' => 'Balade', 'organizer' => 'Association Randonnée Saint-Cirq', 'description' => 'Explorez le patrimoine culturel lors d\'une randonnée à Saint-Cirq-Lapopie. Découvrez les trésors cachés de ce village médiéval lors d\'une balade enrichissante.', 'slug' => 'randonnee-culturelle-saint-cirq-lapopie-2025-07-28'],
-            ['id' => 28, 'name' => 'Fête du Vin', 'date' => '2025-07-30', 'location' => 'Sault', 'price' => 10, 'type' => 'Fête', 'organizer' => 'Vignerons de Sault', 'description' => 'Célébrez la richesse des vins de Sault lors de notre fête annuelle. Dégustations, visites de caves et animations autour du vin vous attendent pour une journée conviviale.', 'slug' => 'fete-du-vin-sault-2025-07-30'],
-            ['id' => 29, 'name' => 'Concert de Musique du Monde', 'date' => '2025-07-01', 'location' => 'Eguisheim', 'price' => 18, 'type' => 'Concert', 'organizer' => 'Sons du Monde Eguisheim', 'description' => 'Voyagez à travers les cultures musicales du monde lors de notre concert à Eguisheim. Une soirée envoûtante de rythmes et de mélodies inspirantes.', 'slug' => 'concert-de-musique-du-monde-eguisheim-2025-07-01'],
-            ['id' => 30, 'name' => 'Salon de la BD', 'date' => '2025-07-03', 'location' => 'Gordes', 'price' => 5, 'type' => 'Salon', 'organizer' => 'BD Gordes', 'description' => 'Explorez l\'univers fascinant de la bande dessinée lors de notre salon à Gordes. Rencontrez des artistes, découvrez les dernières publications et participez à des ateliers créatifs.', 'slug' => 'salon-de-la-bd-gordes-2025-07-03'],
-            ['id' => 31, 'name' => 'Ciné-Club', 'date' => '2025-07-10', 'location' => 'Riquewihr', 'price' => 5, 'type' => 'Cinéma', 'organizer' => 'Ciné-Club Riquewihr', 'description' => 'Rejoignez-nous pour une soirée de projections cinématographiques variées lors de notre ciné-club à Riquewihr. Découvrez des films cultes et indépendants dans une ambiance chaleureuse.', 'slug' => 'cine-club-riquewihr-2025-07-10'],
-            ['id' => 32, 'name' => 'Atelier de Poterie', 'date' => '2025-07-16', 'location' => 'Monpazier', 'price' => 15, 'type' => 'Atelier', 'organizer' => 'Potiers de Monpazier', 'description' => 'Découvrez l\'art de la poterie lors de notre atelier à Monpazier. Apprenez les techniques de façonnage et créez votre propre poterie avec nos artisans potiers.', 'slug' => 'atelier-de-poterie-monpazier-2025-07-16'],
-            ['id' => 33, 'name' => 'Conférence sur l\'Histoire de l\'Art', 'date' => '2025-07-21', 'location' => 'Riquewihr', 'price' => 8, 'type' => 'Conférence', 'organizer' => 'Riquewihr Héritage', 'description' => 'Explorez l\'histoire de l\'art à travers les âges lors de notre conférence à Riquewihr. Découvrez les grands mouvements artistiques et les chefs-d\'œuvre qui ont marqué notre civilisation.', 'slug' => 'conference-sur-l-histoire-de-l-art-riquewihr-2025-07-21'],
-            ['id' => 34, 'name' => 'Exposition de Peinture', 'date' => '2025-07-23', 'location' => 'Lourmarin', 'price' => 12, 'type' => 'Exposition', 'organizer' => 'Peintres de Lourmarin', 'description' => 'Admirez les tableaux colorés et expressifs de nos peintres locaux lors de notre exposition à Lourmarin. Une immersion dans le monde de la peinture contemporaine.', 'slug' => 'exposition-de-peinture-lourmarin-2025-07-23'],
-            ['id' => 35, 'name' => 'Spectacle de Marionnettes', 'date' => '2025-07-26', 'location' => 'Collonges-la-Rouge', 'price' => 8, 'type' => 'Spectacle', 'organizer' => 'Théâtre de Marionnettes Collonges', 'description' => 'Plongez dans l\'univers enchanté du théâtre de marionnettes lors de notre spectacle à Collonges-la-Rouge. Une expérience magique pour petits et grands.', 'slug' => 'spectacle-de-marionnettes-collonges-la-rouge-2025-07-26'],
-            ['id' => 36, 'name' => 'Balade Gourmande', 'date' => '2025-07-29', 'location' => 'Saint-Cirq-Lapopie', 'price' => 10, 'type' => 'Balade', 'organizer' => 'Gourmets de Saint-Cirq', 'description' => 'Découvrez les saveurs locales lors d\'une balade gourmande à Saint-Cirq-Lapopie. Savourez des produits régionaux et rencontrez les producteurs passionnés.', 'slug' => 'balade-gourmande-saint-cirq-lapopie-2025-07-29'],
-            ['id' => 37, 'name' => 'Festival de Musique Électronique', 'date' => '2025-07-04', 'location' => 'Eguisheim', 'price' => 25, 'type' => 'Festival', 'organizer' => 'Association Électronique Eguisheim', 'description' => 'Vivez une expérience musicale unique lors de notre festival de musique électronique à Eguisheim. Découvrez les DJs internationaux et dansez au rythme des beats.', 'slug' => 'festival-de-musique-electronique-eguisheim-2025-07-04'],
-            ['id' => 38, 'name' => 'Journée du Patrimoine', 'date' => '2025-07-07', 'location' => 'Gordes', 'price' => 0, 'type' => 'Journée', 'organizer' => 'Patrimoine Gordes', 'description' => 'Explorez le patrimoine historique et culturel de Gordes lors de notre journée dédiée au patrimoine. Visites guidées, expositions et animations vous attendent.', 'slug' => 'journee-du-patrimoine-gordes-2025-07-07'],
-            ['id' => 39, 'name' => 'Soirée Théâtre Improvisé', 'date' => '2025-07-14', 'location' => 'Conques', 'price' => 10, 'type' => 'Spectacle', 'organizer' => 'Théâtre Impro Conques', 'description' => 'Laissez-vous surprendre par le talent des comédiens lors de notre soirée de théâtre improvisé à Conques. Rires et bonne humeur garantis dans une ambiance décontractée.', 'slug' => 'soiree-theatre-improvise-conques-2025-07-14'],
-            ['id' => 40, 'name' => 'Atelier de Cuisine Provençale', 'date' => '2025-07-12', 'location' => 'Gordes', 'price' => 20, 'type' => 'Atelier', 'organizer' => 'Chefs Provençaux de Gordes', 'description' => 'Découvrez les secrets de la cuisine provençale lors de notre atelier à Gordes. Apprenez à préparer des plats traditionnels et dégustez-les dans une ambiance conviviale.', 'slug' => 'atelier-de-cuisine-provencale-gordes-2025-07-12'],
-            ['id' => 41, 'name' => 'Conférence sur l\'Archéologie', 'date' => '2025-07-18', 'location' => 'Riquewihr', 'price' => 8, 'type' => 'Conférence', 'organizer' => 'Riquewihr Archéologie', 'description' => 'Explorez les découvertes archéologiques lors de notre conférence à Riquewihr. Découvrez les civilisations anciennes et les mystères du passé à travers les fouilles et les artefacts.', 'slug' => 'conference-sur-l-archeologie-riquewihr-2025-07-18'],
-            ['id' => 42, 'name' => 'Exposition de Sculpture', 'date' => '2025-07-20', 'location' => 'Lourmarin', 'price' => 10, 'type' => 'Exposition', 'organizer' => 'Sculpteurs de Lourmarin', 'description' => 'Admirez les sculptures fascinantes de nos artistes locaux lors de notre exposition à Lourmarin. Des œuvres qui donnent vie à la pierre et au métal.', 'slug' => 'exposition-de-sculpture-lourmarin-2025-07-20'],
-            ['id' => 43, 'name' => 'Spectacle de Magie', 'date' => '2025-07-25', 'location' => 'Collonges-la-Rouge', 'price' => 10, 'type' => 'Spectacle', 'organizer' => 'Magiciens de Collonges', 'description' => 'Laissez-vous émerveiller par notre spectacle de magie à Collonges-la-Rouge. Des tours spectaculaires qui défient l\'imagination, pour toute la famille.', 'slug' => 'spectacle-de-magie-collonges-la-rouge-2025-07-25'],
-            ['id' => 44, 'name' => 'Balade en Vélo', 'date' => '2025-07-30', 'location' => 'Sault', 'price' => 8, 'type' => 'Balade', 'organizer' => 'Vélo Club Sault', 'description' => 'Participez à une balade à vélo dans les paysages pittoresques de Sault. Découvrez la région à votre rythme avec nos guides passionnés.', 'slug' => 'balade-en-velo-sault-2025-07-30'],
-        
+            [
+                'id' => 1,
+                'name' => 'Festival de Pop',
+                'date' => '2024-07-01',
+                'location' => 'Châteauneuf-du-Pape',
+                'price' => 20,
+                'type' => 'Musique',
+                'organizer' => 'Association Pop Culture',
+                'description' => 'Un festival célébrant la musique pop avec des artistes locaux et internationaux.',
+                'slug' => 'festival-de-pop-chateauneuf-du-pape-2024-07-01'
+            ],
+            [
+                'id' => 2,
+                'name' => 'Promenade de Santé',
+                'date' => '2024-07-03',
+                'location' => 'Les Baux-de-Provence',
+                'price' => 10,
+                'type' => 'Randonnée',
+                'organizer' => 'Club Nature Provence',
+                'description' => 'Une randonnée guidée à travers les paysages magnifiques de Provence.',
+                'slug' => 'promenade-de-sante-les-baux-de-provence-2024-07-03'
+            ],
+            [
+                'id' => 3,
+                'name' => 'Festival du Vin',
+                'date' => '2024-07-05',
+                'location' => 'Saint-Émilion',
+                'price' => 30,
+                'type' => 'Gastronomie',
+                'organizer' => 'Vignerons de Saint-Émilion',
+                'description' => 'Dégustation de vins fins et découverte des vignobles locaux.',
+                'slug' => 'festival-du-vin-saint-emilion-2024-07-05'
+            ],
+            [
+                'id' => 4,
+                'name' => 'Fête de la Lavande',
+                'date' => '2024-07-07',
+                'location' => 'Sault',
+                'price' => 15,
+                'type' => 'Culture',
+                'organizer' => 'Comité des Fêtes de Sault',
+                'description' => 'Célébration annuelle de la lavande avec des ateliers et des démonstrations.',
+                'slug' => 'fete-de-la-lavande-sault-2024-07-07'
+            ],
+            [
+                'id' => 5,
+                'name' => 'Marché Artisanal',
+                'date' => '2024-07-10',
+                'location' => 'Gordes',
+                'price' => 0,
+                'type' => 'Artisanat',
+                'organizer' => 'Artisans de Gordes',
+                'description' => 'Un marché où les artisans locaux vendent leurs créations uniques.',
+                'slug' => 'marche-artisanal-gordes-2024-07-10'
+            ],
+            [
+                'id' => 6,
+                'name' => 'Nuit des Étoiles',
+                'date' => '2024-07-12',
+                'location' => 'Collonges-la-Rouge',
+                'price' => 5,
+                'type' => 'Science',
+                'organizer' => 'Association Astronomie Collonges',
+                'description' => 'Observation des étoiles avec des astronomes amateurs et professionnels.',
+                'slug' => 'nuit-des-etoiles-collonges-la-rouge-2024-07-12'
+            ],
+            [
+                'id' => 7,
+                'name' => 'Journée Médiévale',
+                'date' => '2024-07-14',
+                'location' => 'Cordes-sur-Ciel',
+                'price' => 25,
+                'type' => 'Historique',
+                'organizer' => 'Historiens de Cordes',
+                'description' => 'Reconstitution historique et activités médiévales pour toute la famille.',
+                'slug' => 'journee-medievale-cordes-sur-ciel-2024-07-14'
+            ],
+            [
+                'id' => 8,
+                'name' => 'Festival de Jazz',
+                'date' => '2024-07-16',
+                'location' => 'Saint-Paul-de-Vence',
+                'price' => 40,
+                'type' => 'Musique',
+                'organizer' => 'Jazz en Provence',
+                'description' => 'Concerts de jazz avec des musiciens renommés dans un cadre pittoresque.',
+                'slug' => 'festival-de-jazz-saint-paul-de-vence-2024-07-16'
+            ],
+            [
+                'id' => 9,
+                'name' => 'Salon du Livre',
+                'date' => '2024-07-20',
+                'location' => 'Le Mont-Saint-Michel',
+                'price' => 10,
+                'type' => 'Littérature',
+                'organizer' => 'Amis du Livre',
+                'description' => 'Rencontres avec des auteurs et séances de dédicaces dans un lieu historique.',
+                'slug' => 'salon-du-livre-le-mont-saint-michel-2024-07-20'
+            ],
+            [
+                'id' => 10,
+                'name' => 'Fête du Fromage',
+                'date' => '2024-07-25',
+                'location' => 'Rocamadour',
+                'price' => 12,
+                'type' => 'Gastronomie',
+                'organizer' => 'Confrérie du Fromage',
+                'description' => 'Dégustation de fromages locaux et ateliers de fabrication.',
+                'slug' => 'fete-du-fromage-rocamadour-2024-07-25'
+            ],
+            [
+                'id' => 11,
+                'name' => 'Cinéma en Plein Air',
+                'date' => '2024-07-02',
+                'location' => 'Eguisheim',
+                'price' => 8,
+                'type' => 'Cinéma',
+                'organizer' => 'Cinéma en Plein Air Alsace',
+                'description' => 'Projection de films classiques et modernes en plein air dans le charmant village d\'Eguisheim.',
+                'slug' => 'cinema-en-plein-air-eguisheim-2024-07-02'
+            ],
+            [
+                'id' => 12,
+                'name' => 'Bal des Pompiers',
+                'date' => '2024-07-04',
+                'location' => 'Yvoire',
+                'price' => 5,
+                'type' => 'Danse',
+                'organizer' => 'Sapeurs-Pompiers de Yvoire',
+                'description' => 'Soirée dansante organisée par les sapeurs-pompiers de Yvoire avec musique et animations.',
+                'slug' => 'bal-des-pompiers-yvoire-2024-07-04'
+            ],
+            [
+                'id' => 13,
+                'name' => 'Fête du Pain',
+                'date' => '2024-07-06',
+                'location' => 'Turenne',
+                'price' => 6,
+                'type' => 'Tradition',
+                'organizer' => 'Boulangers de Turenne',
+                'description' => 'Célébration des traditions boulangères avec des démonstrations de fabrication de pain.',
+                'slug' => 'fete-du-pain-turenne-2024-07-06'
+            ],
+            [
+                'id' => 14,
+                'name' => 'Festival de la Photographie',
+                'date' => '2024-07-08',
+                'location' => 'Giverny',
+                'price' => 18,
+                'type' => 'Art',
+                'organizer' => 'Photographes de Giverny',
+                'description' => 'Expositions de photographies artistiques et ateliers de photographie.',
+                'slug' => 'festival-de-la-photographie-giverny-2024-07-08'
+            ],
+            [
+                'id' => 15,
+                'name' => 'Fête de la Truffe',
+                'date' => '2024-07-11',
+                'location' => 'Lalbenque',
+                'price' => 35,
+                'type' => 'Gastronomie',
+                'organizer' => 'Trufficulteurs de Lalbenque',
+                'description' => 'Dégustation de truffes et produits dérivés avec des démonstrations de cavage.',
+                'slug' => 'fete-de-la-truffe-lalbenque-2024-07-11'
+            ],
+            [
+                'id' => 16,
+                'name' => 'Festival des Lanternes',
+                'date' => '2024-07-13',
+                'location' => 'Gaillac',
+                'price' => 22,
+                'type' => 'Culture',
+                'organizer' => 'Amis de Gaillac',
+                'description' => 'Magnifique exposition de lanternes illuminées racontant des histoires et légendes locales.',
+                'slug' => 'festival-des-lanternes-gaillac-2024-07-13'
+            ],
+            [
+                'id' => 17,
+                'name' => 'Fête du Chocolat',
+                'date' => '2024-07-15',
+                'location' => 'Bourg-en-Bresse',
+                'price' => 14,
+                'type' => 'Gastronomie',
+                'organizer' => 'Chocolatiers de Bourg-en-Bresse',
+                'description' => 'Célébration du chocolat avec des dégustations, ateliers de pâtisserie et démonstrations.',
+                'slug' => 'fete-du-chocolat-bourg-en-bresse-2024-07-15'
+            ],
+            [
+                'id' => 18,
+                'name' => 'Festival des Arts de la Rue',
+                'date' => '2024-07-18',
+                'location' => 'Uzerche',
+                'price' => 12,
+                'type' => 'Art',
+                'organizer' => 'Compagnie des Arts Urbains',
+                'description' => 'Performances d\'art de rue, incluant théâtre, danse et musique en plein air.',
+                'slug' => 'festival-des-arts-de-la-rue-uzerche-2024-07-18'
+            ],
+            [
+                'id' => 19,
+                'name' => 'Nuit Blanche',
+                'date' => '2024-07-22',
+                'location' => 'Pérouges',
+                'price' => 20,
+                'type' => 'Art',
+                'organizer' => 'Nuit Blanche Pérouges',
+                'description' => 'Une nuit entière dédiée à l\'art contemporain avec des installations et performances.',
+                'slug' => 'nuit-blanche-perouges-2024-07-22'
+            ],
+            [
+                'id' => 20,
+                'name' => 'Fête de la Pomme',
+                'date' => '2024-07-28',
+                'location' => 'Beuvron-en-Auge',
+                'price' => 8,
+                'type' => 'Tradition',
+                'organizer' => 'Producteurs de Pommes de Beuvron',
+                'description' => 'Célébration de la pomme avec des dégustations, démonstrations et produits locaux.',
+                'slug' => 'fete-de-la-pomme-beuvron-en-auge-2024-07-28'
+            ],
+            [
+                'id' => 21,
+                'name' => 'Festival du Théâtre',
+                'date' => '2024-07-02',
+                'location' => 'Monpazier',
+                'price' => 18,
+                'type' => 'Théâtre',
+                'organizer' => 'Compagnie Théâtre du Sud',
+                'description' => 'Un festival dédié aux arts du théâtre avec des pièces jouées en plein air.',
+                'slug' => 'festival-du-theatre-monpazier-2024-07-02'
+            ],
+            [
+                'id' => 22,
+                'name' => 'Fête de la Pêche',
+                'date' => '2024-07-05',
+                'location' => 'La Flotte',
+                'price' => 7,
+                'type' => 'Nature',
+                'organizer' => 'Association des Pêcheurs de La Flotte',
+                'description' => 'Concours de pêche et dégustation de fruits de mer frais.',
+                'slug' => 'fete-de-la-peche-la-flotte-2024-07-05'
+            ],
+            [
+                'id' => 23,
+                'name' => 'Festival des Arts Numériques',
+                'date' => '2024-07-08',
+                'location' => 'Baume-les-Messieurs',
+                'price' => 25,
+                'type' => 'Technologie',
+                'organizer' => 'Artistes Numériques de Baume',
+                'description' => 'Exploration des arts numériques avec des expositions interactives et des ateliers.',
+                'slug' => 'festival-des-arts-numeriques-baume-les-messieurs-2024-07-08'
+            ],
+            [
+                'id' => 24,
+                'name' => 'Fête des Vieux Métiers',
+                'date' => '2024-07-10',
+                'location' => 'Riquewihr',
+                'price' => 5,
+                'type' => 'Culture',
+                'organizer' => 'Traditions Alsaciennes',
+                'description' => 'Démonstrations de métiers anciens et ateliers interactifs pour les enfants.',
+                'slug' => 'fete-des-vieux-metiers-riquewihr-2024-07-10'
+            ],
+            [
+                'id' => 25,
+                'name' => 'Festival de la Montgolfière',
+                'date' => '2024-07-12',
+                'location' => 'Annonay',
+                'price' => 30,
+                'type' => 'Sport',
+                'organizer' => 'Aérostiers d\'Annonay',
+                'description' => 'Spectacle de montgolfières avec des vols captifs et libres, et des animations au sol.',
+                'slug' => 'festival-de-la-montgolfiere-annonay-2024-07-12'
+            ],
+            [
+                'id' => 26,
+                'name' => 'Salon de la Bande Dessinée',
+                'date' => '2024-07-14',
+                'location' => 'Saint-Cirq-Lapopie',
+                'price' => 10,
+                'type' => 'Littérature',
+                'organizer' => 'Amateurs de BD',
+                'description' => 'Rencontres avec des auteurs de bandes dessinées, dédicaces et ateliers de dessin.',
+                'slug' => 'salon-de-la-bande-dessinee-saint-cirq-lapopie-2024-07-14'
+            ],
+            [
+                'id' => 27,
+                'name' => 'Fête de la Châtaigne',
+                'date' => '2024-07-16',
+                'location' => 'Murat',
+                'price' => 12,
+                'type' => 'Gastronomie',
+                'organizer' => 'Producteurs de Châtaignes',
+                'description' => 'Marché de producteurs de châtaignes et produits dérivés, avec des dégustations et ateliers.',
+                'slug' => 'fete-de-la-chataigne-murat-2024-07-16'
+            ],
+            [
+                'id' => 28,
+                'name' => 'Festival de la Sculpture',
+                'date' => '2024-07-18',
+                'location' => 'Parthenay',
+                'price' => 20,
+                'type' => 'Art',
+                'organizer' => 'Sculpteurs de Parthenay',
+                'description' => 'Expositions de sculptures en plein air et ateliers pour découvrir cet art.',
+                'slug' => 'festival-de-la-sculpture-parthenay-2024-07-18'
+            ],
+            [
+                'id' => 29,
+                'name' => 'Festival des Saveurs',
+                'date' => '2024-07-21',
+                'location' => 'Cassis',
+                'price' => 15,
+                'type' => 'Gastronomie',
+                'organizer' => 'Gourmets de Cassis',
+                'description' => 'Découverte des spécialités culinaires locales avec dégustations et démonstrations.',
+                'slug' => 'festival-des-saveurs-cassis-2024-07-21'
+            ],
+            [
+                'id' => 30,
+                'name' => 'Journées du Patrimoine',
+                'date' => '2024-07-24',
+                'location' => 'Salers',
+                'price' => 0,
+                'type' => 'Historique',
+                'organizer' => 'Historiennes de Salers',
+                'description' => 'Visites guidées des monuments historiques de Salers avec des experts locaux.',
+                'slug' => 'journees-du-patrimoine-salers-2024-07-24'
+            ],
+            [
+                'id' => 31,
+                'name' => 'Fête de la Musique Classique',
+                'date' => '2024-07-26',
+                'location' => 'Villefranche-de-Conflent',
+                'price' => 20,
+                'type' => 'Musique',
+                'organizer' => 'Orchestre Symphonique de Villefranche',
+                'description' => 'Concerts de musique classique avec des solistes et orchestres de renom.',
+                'slug' => 'fete-de-la-musique-classique-villefranche-de-conflent-2024-07-26'
+            ],
+            [
+                'id' => 32,
+                'name' => 'Fête de la Poterie',
+                'date' => '2024-07-28',
+                'location' => 'Sainte-Enimie',
+                'price' => 8,
+                'type' => 'Artisanat',
+                'organizer' => 'Potiers de Sainte-Enimie',
+                'description' => 'Expositions et démonstrations de poterie avec des ateliers pour tous les âges.',
+                'slug' => 'fete-de-la-poterie-sainte-enimie-2024-07-28'
+            ],
+            [
+                'id' => 33,
+                'name' => 'Festival des Fleurs',
+                'date' => '2024-07-01',
+                'location' => 'Collioure',
+                'price' => 10,
+                'type' => 'Nature',
+                'organizer' => 'Horticulteurs de Collioure',
+                'description' => 'Une célébration des fleurs avec des expositions florales, des ateliers de jardinage, et des concours.',
+                'slug' => 'festival-des-fleurs-collioure-2024-07-01'
+            ],
+            [
+                'id' => 34,
+                'name' => 'Fête du Cinéma',
+                'date' => '2024-07-03',
+                'location' => 'Flavigny-sur-Ozerain',
+                'price' => 15,
+                'type' => 'Cinéma',
+                'organizer' => 'Cinéma Classique Bourgogne',
+                'description' => 'Projections de films classiques et contemporains en plein air.',
+                'slug' => 'fete-du-cinema-flavigny-sur-ozerain-2024-07-03'
+            ],
+            [
+                'id' => 35,
+                'name' => 'Festival de la Danse',
+                'date' => '2024-07-05',
+                'location' => 'Brantôme',
+                'price' => 18,
+                'type' => 'Danse',
+                'organizer' => 'Danseurs de Brantôme',
+                'description' => 'Spectacles de danse variés avec des compagnies locales et internationales.',
+                'slug' => 'festival-de-la-danse-brantome-2024-07-05'
+            ],
+            [
+                'id' => 36,
+                'name' => 'Fête des Vins',
+                'date' => '2024-07-07',
+                'location' => 'Sancerre',
+                'price' => 25,
+                'type' => 'Gastronomie',
+                'organizer' => 'Vignerons de Sancerre',
+                'description' => 'Dégustation de vins locaux avec des sommeliers experts et des ateliers œnologiques.',
+                'slug' => 'fete-des-vins-sancerre-2024-07-07'
+            ],
+            [
+                'id' => 37,
+                'name' => 'Festival de la Bande Dessinée',
+                'date' => '2024-07-10',
+                'location' => 'Luz-Saint-Sauveur',
+                'price' => 12,
+                'type' => 'Littérature',
+                'organizer' => 'Association des Bédéphiles',
+                'description' => 'Rencontres avec des auteurs de bandes dessinées, séances de dédicaces et ateliers de dessin.',
+                'slug' => 'festival-de-la-bande-dessinee-luz-saint-sauveur-2024-07-10'
+            ],
+            [
+                'id' => 38,
+                'name' => 'Fête de la Guitare',
+                'date' => '2024-07-12',
+                'location' => 'Jougne',
+                'price' => 20,
+                'type' => 'Musique',
+                'organizer' => 'Guitaristes de Jougne',
+                'description' => 'Concerts et masterclasses de guitare avec des artistes renommés.',
+                'slug' => 'fete-de-la-guitare-jougne-2024-07-12'
+            ],
+            [
+                'id' => 39,
+                'name' => 'Festival des Jeux',
+                'date' => '2024-07-14',
+                'location' => 'Olargues',
+                'price' => 8,
+                'type' => 'Divertissement',
+                'organizer' => 'Ludothécaires d\'Olargues',
+                'description' => 'Jeux de société, jeux de rôle et tournois pour tous les âges.',
+                'slug' => 'festival-des-jeux-olargues-2024-07-14'
+            ],
+            [
+                'id' => 40,
+                'name' => 'Nuit des Contes',
+                'date' => '2024-07-16',
+                'location' => 'Saint-Antoine-l\'Abbaye',
+                'price' => 10,
+                'type' => 'Littérature',
+                'organizer' => 'Conteurs de Saint-Antoine',
+                'description' => 'Soirée de contes pour enfants et adultes avec des conteurs professionnels.',
+                'slug' => 'nuit-des-contes-saint-antoine-l-abbaye-2024-07-16'
+            ],
+            [
+                'id' => 41,
+                'name' => 'Festival de la Mer',
+                'date' => '2024-07-18',
+                'location' => 'Cancale',
+                'price' => 12,
+                'type' => 'Nature',
+                'organizer' => 'Amis de la Mer',
+                'description' => 'Célébration de la mer avec des expositions, des excursions en bateau et des dégustations de fruits de mer.',
+                'slug' => 'festival-de-la-mer-cancale-2024-07-18'
+            ],
+            [
+                'id' => 42,
+                'name' => 'Fête du Miel',
+                'date' => '2024-07-20',
+                'location' => 'Barjac',
+                'price' => 7,
+                'type' => 'Gastronomie',
+                'organizer' => 'Apiculteurs de Barjac',
+                'description' => 'Dégustation de miel et produits dérivés avec des ateliers sur l\'apiculture.',
+                'slug' => 'fete-du-miel-barjac-2024-07-20'
+            ],
+            [
+                'id' => 43,
+                'name' => 'Festival des Arts du Cirque',
+                'date' => '2024-07-22',
+                'location' => 'Marcolès',
+                'price' => 18,
+                'type' => 'Divertissement',
+                'organizer' => 'Cirque en Fête',
+                'description' => 'Spectacles de cirque avec des acrobates, jongleurs et clowns.',
+                'slug' => 'festival-des-arts-du-cirque-marcoles-2024-07-22'
+            ],
+            [
+                'id' => 44,
+                'name' => 'Fête des Saveurs Provençales',
+                'date' => '2024-07-24',
+                'location' => 'Forcalquier',
+                'price' => 15,
+                'type' => 'Gastronomie',
+                'organizer' => 'Gourmets de Forcalquier',
+                'description' => 'Découverte des saveurs de la Provence avec des dégustations et démonstrations culinaires.',
+                'slug' => 'fete-des-saveurs-provencales-forcalquier-2024-07-24'
+            ],
+            [
+                'id' => 45,
+                'name' => 'Festival de la Peinture',
+                'date' => '2024-07-26',
+                'location' => 'Pont-Aven',
+                'price' => 20,
+                'type' => 'Art',
+                'organizer' => 'Artistes de Pont-Aven',
+                'description' => 'Expositions de peintures et ateliers d\'art pour tous les âges.',
+                'slug' => 'festival-de-la-peinture-pont-aven-2024-07-26'
+            ]
+
             // Faudrait pas hésiter à en rajouter pour avoir plus de contenu
         ];
     }
@@ -68,11 +519,22 @@ class FakeEventService
 
     public function getSimilarEvents($event)
     {
-        // Example criteria: same type
+        // même genre
         $similarEvents = array_filter($this->getEvents(), function ($e) use ($event) {
             return $e['type'] === $event['type'] && $e['slug'] !== $event['slug'];
         });
 
         return $similarEvents;
+    }
+
+    // Peut être amélioré pour prendre en compte la localisation ou un radius de recherche
+    public function GetNearEvents($event)
+    {
+        // même localisation
+        $nearEvents = array_filter($this->getEvents(), function ($e) use ($event) {
+            return $e['location'] === $event['location'] && $e['slug'] !== $event['slug'];
+        });
+
+        return $nearEvents;
     }
 }
