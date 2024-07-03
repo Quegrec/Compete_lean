@@ -1,12 +1,45 @@
 {% extends "base.html.twig" %}
 
+{% block title %} Nos CGU {% endblock %}
+
 {% block body %}
 
-<div class="container mx-auto px-4 py-8 grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 pt-48">
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Conditions Générales d'Utilisation (CGU) de la Plateforme Culturally</h1>
 
-    <div class="bg-white p-4 rounded-lg shadow-lg">
-        <h1 class="text-2xl font-bold">Conditions Générales d'Utilisation</h1>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla nec urna tincidunt luctus</p>
-    </div>
+    <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Préambule</h2>
+        <p class="mb-4">
+            Les présentes Conditions Générales d'Utilisation (ci-après dénommées "CGU") ont pour objet de définir les modalités et conditions d'utilisation de la plateforme SaaS Culturally (ci-après dénommée "la Plateforme"). La Plateforme met en relation des mairies et des associations pour l'organisation d'événements culturels à destination des citoyens.
+        </p>
+    </section>
+
+    <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Article 1 - Définitions</h2>
+        <ul class="list-disc list-inside mb-4">
+            <li><strong>Plateforme :</strong> La plateforme SaaS Culturally accessible à l'adresse https://culturally-84dadb829e22.herokuapp.com.</li>
+            <li><strong>Utilisateur :</strong> Toute personne physique ou morale utilisant la Plateforme, incluant les mairies, les associations, et les citoyens.</li>
+            <li><strong>Mairie :</strong> Toute municipalité utilisant la Plateforme pour organiser des événements culturels.</li>
+            <li><strong>Association :</strong> Toute organisation à but non lucratif utilisant la Plateforme pour proposer des événements culturels.</li>
+            <li><strong>Événement :</strong> Toute activité culturelle organisée par une mairie en collaboration avec une association et destinée aux citoyens.</li>
+        </ul>
+    </section>
+
+    <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Article 2 - Acceptation des CGU</h2>
+        <p class="mb-4">
+            L'accès à la Plateforme et son utilisation impliquent l'acceptation sans réserve des présentes CGU par l'Utilisateur. En s'inscrivant sur la Plateforme, l'Utilisateur reconnaît avoir pris connaissance des CGU et les accepter.
+        </p>
+    </section>
+
+    <!-- Ajoutez d'autres sections ici de la même manière -->
+
+    <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Article 10 - Contact</h2>
+        <p class="mb-4">
+            Pour toute question concernant les présentes CGU, l'Utilisateur peut contacter Culturally à l'adresse suivante : culturally.france@gmail.com.
+        </p>
+    </section>
+</div>
     
 {% endblock %}
