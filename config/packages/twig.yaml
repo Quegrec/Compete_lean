@@ -1,4 +1,6 @@
 twig:
+    globals:
+        google_analytics_id: '%google_analytics_id%'
     file_name_pattern: '*.twig'
 
 when@test:

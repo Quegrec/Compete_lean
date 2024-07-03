@@ -6,61 +6,60 @@
 
 {% block body %}
 
-    <div class="flex flex-col bg-landing bg-cover bg-center h-screen px-[55px]">
-        <div class="lg:w-[639px]">
-            <h1 class="text-white font-title text-3xl lg:text-[62px] lg:leading-[80.6px] mt-[110px] mb-10 sm:mt-[238px]">la plateforme de dynamisation culturelle locale</h1>
-            <p class="text-white font-content text-lg leading-[32.4px]">Notre mission est de créer des ponts entre les citoyens, les associations,
+    <div class="flex flex-col lg:flex-row-reverse bg-cover bg-center h-screen px-[55px]">
+        <img loading="lazy" src="/img/hero.svg" alt="hero" class="lg:px-[148px]">
+        <div class="lg:px-36">
+            <h1 class="text-primary font-title text-3xl lg:text-[62px] lg:leading-[80.6px] mt-[110px] mb-10 lg:mt-[238px]">la plateforme de dynamisation culturelle locale</h1>
+            <p class="text-primary font-content text-lg leading-[32.4px]">Notre mission est de créer des ponts entre les citoyens, les associations,
             et les mairies pour valoriser et dynamiser la vie culturelle de chaque ville.</p>
             <button class="place-self-center bg-cta px-[45px] py-[14px] mt-16 rounded-full text-sm font-cta">Nous rejoindre</button>
         </div>
     </div>
-    
-    <div class="bg-primary rounded-3xl h-[481px] w-full absolute top-[600px] sm:top-[878px] z-0"></div>
-    
-    <div class="relative flex flex-col mt-[-90px] z-10">
-        <h2 class="text-white font-title text-xl lg:text-4xl place-self-center py-[52px] px-[45px]">
+
+    <!-- J'ai abandoné l'intégration ici -->    
+    <div class="bg-fondSombre bg-cover flex flex-col mt-[134px] text-center">
+        <h2 class="text-white font-title text-xl lg:text-4xl  pt-[52px] px-[45px]">
             pourquoi nous rejoindre ?
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 place-self-center mt-8 gap-20 pb-[52px] px-[45px]">
-            <div class="bg-white rounded-3xl flex flex-col">
+        <div class="grid grid-cols-1 md:grid-cols-3 place-self-center lg:justify-between mt-8 lg:mt-14 pb-[52px]">
+            <div class="bg-formejaune bg-no-repeat rounded-3xl flex flex-col w-full h-full">
                 <div class="px-[41px] lg:text-center">
-                    <h3 class="text-[#5C8666] font-title text-2xl mt-5">citoyens</h3>
-                    <p class="text-[#5C8666] font-content mt-4 leading-[25.6px]">
+                    <h3 class="text-primary font-title text-2xl mt-16">citoyens</h3>
+                    <p class="text-primary font-content mt-4 leading-[25.6px]">
                         Participez activement à la vie culturelle de votre ville, découvrez de nouveaux événements et projets,
                         et contribuez à la richesse de votre communauté.
                     </p>
                 </div>
-                <img loading="lazy" src="/img/people.jpg" alt="citoyens" class="rounded-3xl">
+                <img loading="lazy" src="/img/Citoyens.svg" alt="citoyens" class="w-max mt-12 ml-16 z-10">
             </div>
-            <div class="bg-white rounded-3xl flex flex-col lg:flex-col-reverse">
+            <div class="bg-formebleue bg-no-repeat bg-cover rounded-3xl flex flex-col lg:flex-col-reverse mt-[-100px]">
                 <div class="px-[41px] lg:text-center">
-                    <h3 class="text-[#326BBA] font-title text-2xl mt-5">associations</h3>
-                    <p class="text-[#326BBA] font-content mt-4 leading-[25.6px]">
+                    <h3 class="text-white font-title text-2xl mt-36">associations</h3>
+                    <p class="text-white font-content mt-4 leading-[25.6px]">
                         Accédez à des fonds, trouvez des partenaires, et valorisez vos initiatives grâce à une visibilité accrue et des ressources adaptées.
                     </p>
                 </div>
-                <img loading="lazy" src="/img/people.jpg" alt="associations" class="rounded-3xl">
+                <img loading="lazy" src="/img/Associations.svg" alt="associations" class="w-max mt-8">
             </div>
-            <div class="bg-white rounded-3xl flex flex-col">
+            <div class="bg-formerouge bg-no-repeat ml-[35px] mt-11 rounded-3xl flex flex-col">
                 <div class="px-[41px] lg:text-center">
-                    <h3 class="text-[#D0220A] font-title text-2xl mt-5">mairies</h3>
-                    <p class="text-[#D0220A] font-content mt-4 leading-[25.6px]">
+                    <h3 class="text-white font-title text-2xl mt-5">mairies</h3>
+                    <p class="text-white font-content mt-4 leading-[25.6px]">
                         Participez activement à la vie culturelle de votre ville, découvrez de nouveaux événements et projets,
                         et contribuez à la richesse de votre communauté.
                     </p>
                 </div>
-                <img loading="lazy" src="/img/people.jpg" alt="mairies" class="rounded-3xl">
+                <img loading="lazy" src="/img/Mairie.svg" alt="mairies" class="w-max ml-[200px]">
             </div>
         </div>
         <div class="flex justify-center mt-8">
-            <button class="bg-cta px-[45px] py-[14px] rounded-full text-sm font-cta">Nous rejoindre</button>
+            <button class="bg-cta px-[45px] py-[14px] rounded-full text-sm font-cta mb-28">Nous rejoindre</button>
         </div>
-        <img loading="lazy" src="/img/Pirouette.svg" alt="pirouette" class="absolute top-[1674px] lg:top-[758px] right-0 h-[196px] lg:h-[482.89px]">
     </div>
 
 
-    <div class="flex flex-col text-primary mt-[444px] px-[76px] gap-[124px]">
-        <h2 class="text-primary font-title text-2xl lg:text-4xl place-self-center lg:place-self-start">faciliter les projets culturels</h2>
+    <div class="flex flex-col text-primary mt-24 px-[76px] gap-[60px] text-center">
+        <h2 class="text-primary font-title text-2xl lg:text-4xl place-self-center">faciliter les projets culturels</h2>
         <div class="flex flex-col lg:flex-row lg:justify-between">
             <div class="flex flex-col w-[320px]">
                 <img loading="lazy" src="/img/Bleu.svg" alt="bleu" class="mb-[32.12px]">
@@ -69,7 +68,7 @@
                     Bénéficiez d'un soutien financier pour vos projets grâce à nos partenaires et à des campagnes de crowdfunding.
                 </p>
             </div>
-            <div class="flex flex-col w-[320px] pb-[123px]">
+            <div class="flex flex-col w-[320px]">
                 <img loading="lazy" src="/img/Vert.svg" alt="vert" class="mb-[32.12px] h-[218.66px]">
                 <h3 class="font-title text-2xl">promotion des événements</h3>
                 <p class="font-content mt-4 leading-[25.6px]">
@@ -85,70 +84,56 @@
             </div>
         </div>
         <div class="flex justify-center mt-8 mb-16">
-            <button class="bg-cta px-[45px] py-[14px] rounded-full text-sm font-cta">Nous rejoindre</button>
+            <button class="bg-cta px-[45px] py-[14px] rounded-full text-sm font-cta">Je soutiens</button>
         </div>
     </div>
 
-    <div class="bg-cards bg-cover bg-center h-[1354px] lg:h-[663px] rounded-3xl lg:mt-48">
-        <div class="bg-white rounded-3xl lg:rounded-b-none flex flex-col place-self-center gap-10 mt-32 mx-[55px] relative top-[190px] pb-20">
-            <h2 class="font-title text-2xl lg:text-4xl pt-[52px] px-[45px] text-center">valoriser et soutenir la culture locale</h2>
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 place-self-center">
-                <div class="bg-rouge bg-cover bg-center h-[247.09px] w-[234px] text-secondary text-center align-middle">
-                    <h3 class="font-title text-lg mt-16">lancez vos projets</h3>
+    <div class="bg-fondClair bg-no-repeat bg-cover lg:mt-48">
+        <div class="flex flex-col place-self-center mt-28 pb-20">
+            <h2 class="font-title text-2xl lg:text-4xl pt-[52px] px-[45px] mb-10 text-center">valoriser et soutenir la culture locale</h2>
+            <div class="flex flex-col lg:flex-row gap-64 lg:gap-16 place-self-center text-secondary">
+                <div class="bg-fondvert bg-cover bg-center h-[247.09px] text-center align-middle">
+                    <h3 class="font-title text-lg mt-16">lancez votre projet</h3>
                     <p class="font-content text-sm mt-4 leading-[25.6px]">
                         Présentez vos idées et trouvez le soutien nécessaire pour les concrétiser.
                     </p>
+                    <img src="img/lancezProjet.svg" alt="fusée" class="z-10">
                 </div>
-                <div class="bg-jaune bg-cover bg-center h-[247.09px] w-[234px] text-primary text-center align-middle">
+                <div class="bg-fondbleu bg-cover bg-center h-[247.09px] text-center align-middle">
                     <h3 class="font-title text-lg mt-16">soutenez des initiatives</h3>
                     <p class="font-content text-sm mt-4 leading-[25.6px]">
                         Explorez les projets en cours et apportez votre contribution.
                     </p>
+                    <img src="img/soutenezInitiatives.svg" alt="entraide" class="z-10">
                 </div>
-                <div class="bg-bleu bg-cover bg-center h-[247.09px] w-[234px] text-secondary text-center align-middle">
+                <div class="bg-fondrouge bg-cover bg-center h-[247.09px] text-center align-middle">
                     <h3 class="font-title text-lg mt-16">collaborations locales</h3>
                     <p class="font-content text-sm mt-4 leading-[25.6px]">
                         Trouvez des partenaires locaux pour développer des initiatives communes.
                     </p>
+                    <img src="img/collaborationsLocales.svg" alt="je sais pas" class="z-10">
                 </div>
             </div>
-            <button class="place-self-center bg-cta px-[45px] py-[14px] rounded-full text-sm font-semibold font-cta">Je soutiens</button>
+            <button class="place-self-center bg-cta px-[45px] py-[14px] mt-60 rounded-full text-sm font-cta">Je soutiens</button>
         </div>
     </div>
 
-    <div class="bg-[#92929226] mt-[124px]">
-        <h2 class="font-title text-xl lg:text-2xl text-center py-[52px] px-[45px]">nos futurs partenaires</h2>
-        <div class="flex justify-between lg:justify-center lg:gap-20">
-            <img loading="lazy" src="/img/ministere_culture.svg" alt="Ministère de la culture">
-            <img loading="lazy" src="/img/anct.svg" alt="Agence nationale de la cohésion des territoires">
-            <img loading="lazy" src="/img/secretariat_ssr.svg" alt="Secretariat d'Etat chargé de l'économie sociale, solidaire et responsable">
+    <!-- carrousel a ajouter -->
+
+
+     <div class="flex flex-col lg:flex-row rounded-t-3xl bg-primary text-white text-center mt-28 py-[55px]">
+        <img loading="lazy" src="/img/face_icon.svg" alt="notre mascotte" class="px-[158px]">
+        <div>
+            <p class="text-xl lg:text-3xl leading-5 mx-32">Pour en savoir plus rejoignez notre newsletter</p>
+            {{ form_start(form) }}
+                <div class="rounded-full border border-[#F8D595] flex justify-center my-14 mx-10 gap-4">
+                    {{ form_widget(form.email, {'attr': {'class': 'px-6 py-2 bg-transparent lg:w-[550px] text-white'} } ) }}
+                    <button type="submit" class="rounded-full text-primary px-6 py-2 bg-[#F8D595]">S'inscrire</button>
+                </div>
+                <div class="text-red-500">
+                    {{ form_errors(form.email) }}
+                </div>
+            {{ form_end(form) }}
         </div>
-    </div>
-
-    <!-- carrousel a voir -->
-
-    {# <div class="flex flex-col bg-white mt-[124px] place-content-center">
-        <h2 class="font-title text-xl place-self-center py-[52px] px-[45px]">notre galerie</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 place-self-center gap-20 py-[52px] px-[45px]">
-            <img loading="lazy" src="/img/galerie1.jpg" alt="galerie1" class="rounded-3xl">
-            <img loading="lazy" src="/img/galerie2.jpg" alt="galerie2" class="rounded-3xl">
-            <img loading="lazy" src="/img/galerie3.jpg" alt="galerie3" class="rounded-3xl">
-        </div>
-        <button class="place-self-center bg-cta px-[45px] py-[14px] rounded-full text-sm font-semibold font-cta">Voir plus</button>
-    </div> #}
-
-     <div class="rounded-3xl bg-custom-gradient text-primary text-center mt-28 mx-2 lg:mx-[71px]">
-        <img loading="lazy" src="/img/face_icon.svg" alt="notre mascotte" class="lg:hidden block px-[158px] py-[55px]">
-        <img loading="lazy" src="/img/face_icon.svg" alt="notre mascotte" class="hidden lg:flex h-40 w-40 relative top-[95px] left-[30px]">
-        <p class="text-2xl lg:text-3xl font-title leading-5">Pour en savoir plus rejoignez notre newsletter</p>
-        {{ form_start(form) }}
-            <div class="flex justify-center py-14 gap-4">
-                {{ form_widget(form.email, {'attr': {'class': 'rounded-full border border-black px-6 py-2 bg-transparent lg:w-[550px]'} } ) }}
-                <button type="submit" class="rounded-full border border-black px-6 py-2 bg-transparent">S'inscrire</button>
-            </div>
-            <div class="text-red-500">
-                {{ form_errors(form.email) }}
-            </div>
-        {{ form_end(form) }}
     </div>
 {% endblock %}
